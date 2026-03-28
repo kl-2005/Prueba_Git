@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prueba_Git
 {
-    internal class Tutor
+    public class Tutor
     {
         public Tutor()
         {
