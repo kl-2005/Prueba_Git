@@ -21,9 +21,11 @@ namespace Prueba_Git
             Asignatura = asignatura;
         }
 
-        public string Cedula{ get; set; }
-        public string Nombre{ get; set; }
-        public string Asignatura{ get; set; }
+        public string Cedula { get; set; }
+        public string Nombre { get; set; }
+        public string Asignatura { get; set; }
+        public int Cupo_Maximo {get; set; }
+        public int Cupo_Disponible { get; set; }
         public List<Estudiante> ListaEstudiantes { get; set; }
     }
 }
