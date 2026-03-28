@@ -19,12 +19,11 @@ namespace Prueba_Git
 
         }
 
-        public Estudiante(string cedula, string nombre, string apellido, string correo, Tutor tutor, Horario horario)
+        public Estudiante(string cedula, string nombre, string apellido, Tutor tutor, Horario horario)
         {
             Cedula = cedula;
             Nombre = nombre;
             Apellido = apellido;
-            Correo = correo;
             Tutor = tutor;
             Horario = horario;
         }
