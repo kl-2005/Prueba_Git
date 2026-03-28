@@ -31,5 +31,11 @@ namespace Prueba_Git
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_Estudiante venta_estudiante=new Form_Estudiante();
+            venta_estudiante.ShowDialog();
+        }
     }
 }
