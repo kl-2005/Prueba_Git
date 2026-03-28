@@ -10,7 +10,6 @@ namespace Prueba_Git
     {
         public string Cedula { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
         public Tutor Tutor { get; set; }
         public Horario Horario { get; set; }
 
@@ -19,11 +18,10 @@ namespace Prueba_Git
 
         }
 
-        public Estudiante(string cedula, string nombre, string apellido, Tutor tutor, Horario horario)
+        public Estudiante(string cedula, string nombre, Tutor tutor, Horario horario)
         {
             Cedula = cedula;
             Nombre = nombre;
-            Apellido = apellido;
             Tutor = tutor;
             Horario = horario;
         }
