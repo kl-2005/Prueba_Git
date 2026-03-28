@@ -33,8 +33,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_CuposDisponibles = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_Registrar_Tutor = new System.Windows.Forms.Button();
+            this.dataGridView_Tutor = new System.Windows.Forms.DataGridView();
+            this.button_RegistrarTutor = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_NombreTutor = new System.Windows.Forms.TextBox();
             this.textBox_CedulaTutor = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             this.numericUpDown_CapacidadMaxima = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,8 +56,8 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox_CuposDisponibles);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.button_Registrar_Tutor);
+            this.groupBox1.Controls.Add(this.dataGridView_Tutor);
+            this.groupBox1.Controls.Add(this.button_RegistrarTutor);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox_NombreTutor);
             this.groupBox1.Controls.Add(this.textBox_CedulaTutor);
@@ -104,24 +104,24 @@
             this.label5.Text = "Cupos disponibles";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // dataGridView1
+            // dataGridView_Tutor
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 272);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(507, 349);
-            this.dataGridView1.TabIndex = 8;
+            this.dataGridView_Tutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Tutor.Location = new System.Drawing.Point(26, 272);
+            this.dataGridView_Tutor.Name = "dataGridView_Tutor";
+            this.dataGridView_Tutor.RowHeadersWidth = 62;
+            this.dataGridView_Tutor.RowTemplate.Height = 28;
+            this.dataGridView_Tutor.Size = new System.Drawing.Size(507, 349);
+            this.dataGridView_Tutor.TabIndex = 8;
             // 
-            // button_Registrar_Tutor
+            // button_RegistrarTutor
             // 
-            this.button_Registrar_Tutor.Location = new System.Drawing.Point(348, 175);
-            this.button_Registrar_Tutor.Name = "button_Registrar_Tutor";
-            this.button_Registrar_Tutor.Size = new System.Drawing.Size(114, 31);
-            this.button_Registrar_Tutor.TabIndex = 7;
-            this.button_Registrar_Tutor.Text = "Registrar";
-            this.button_Registrar_Tutor.UseVisualStyleBackColor = true;
+            this.button_RegistrarTutor.Location = new System.Drawing.Point(348, 175);
+            this.button_RegistrarTutor.Name = "button_RegistrarTutor";
+            this.button_RegistrarTutor.Size = new System.Drawing.Size(114, 31);
+            this.button_RegistrarTutor.TabIndex = 7;
+            this.button_RegistrarTutor.Text = "Registrar";
+            this.button_RegistrarTutor.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -198,7 +198,7 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).EndInit();
             this.ResumeLayout(false);
 
@@ -213,8 +213,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox_NombreTutor;
         private System.Windows.Forms.TextBox textBox_CedulaTutor;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button_Registrar_Tutor;
+        private System.Windows.Forms.DataGridView dataGridView_Tutor;
+        private System.Windows.Forms.Button button_RegistrarTutor;
         private System.Windows.Forms.TextBox textBox_CuposOcupados;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox_CuposDisponibles;

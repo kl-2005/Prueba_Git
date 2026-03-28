@@ -26,5 +26,10 @@ namespace Prueba_Git
         {
 
         }
+
+        private void textBox_CedulaEstudiantes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

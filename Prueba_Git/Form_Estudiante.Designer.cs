@@ -63,6 +63,7 @@
             this.textBox_CedulaEstudiantes.Name = "textBox_CedulaEstudiantes";
             this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(100, 26);
             this.textBox_CedulaEstudiantes.TabIndex = 2;
+            this.textBox_CedulaEstudiantes.TextChanged += new System.EventHandler(this.textBox_CedulaEstudiantes_TextChanged);
             // 
             // label2
             // 
