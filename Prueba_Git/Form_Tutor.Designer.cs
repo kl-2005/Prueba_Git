@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -49,6 +50,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label6);
@@ -177,6 +179,15 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
             this.numericUpDown1.TabIndex = 13;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(584, 216);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 20);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Estadisticas de cupos";
+            // 
             // Form_Tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -209,5 +220,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label7;
     }
 }
