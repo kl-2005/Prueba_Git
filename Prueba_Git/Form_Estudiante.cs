@@ -41,7 +41,7 @@ namespace Prueba_Git
         private List<Estudiante> RegistrarEstudiante()
         {
             List<Estudiante> ListaEstudiantes = new List<Estudiante>();
-            while(textBox_CedulaEstudiantes.Text.Trim() == "" || textBox_NombresEstudiantes.Text.Trim() == "")
+            if(textBox_CedulaEstudiantes.Text.Trim() == "" || textBox_NombresEstudiantes.Text.Trim() == "")
                 MessageBox.Show("Debe llenar los campos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             Estudiante estudiante = new Estudiante(textBox_CedulaEstudiantes.Text,textBox_NombresEstudiantes.Text);
             ListaEstudiantes.Add(estudiante);
