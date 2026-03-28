@@ -37,5 +37,11 @@ namespace Prueba_Git
             Form_Estudiante venta_estudiante=new Form_Estudiante();
             venta_estudiante.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_Tutor venta_Tutor = new Form_Tutor();
+            venta_Tutor.ShowDialog();
+        }
     }
 }
