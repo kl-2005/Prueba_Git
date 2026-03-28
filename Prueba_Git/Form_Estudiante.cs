@@ -35,18 +35,26 @@ namespace Prueba_Git
 
         private void button_ResgistrarEstudiante_Click(object sender, EventArgs e)
         {
-            RegistrarEstudiante();
+            ValidarCamposEstudiantes();
         }
 
-        private List<Estudiante> RegistrarEstudiante()
+        private void textBox_NombresEstudiantes_TextChanged(object sender, EventArgs e)
         {
-            List<Estudiante> ListaEstudiantes = new List<Estudiante>();
-            if(textBox_CedulaEstudiantes.Text.Trim() == "" || textBox_NombresEstudiantes.Text.Trim() == "")
-                MessageBox.Show("Debe llenar los campos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            Estudiante estudiante = new Estudiante(textBox_CedulaEstudiantes.Text,textBox_NombresEstudiantes.Text);
-            ListaEstudiantes.Add(estudiante);
 
-            return ListaEstudiantes;
+        }
+
+
+        bool ValidarCamposEstudiantes() 
+        {
+
+            if (textBox_CedulaEstudiantes.Text.Trim() == "" || textBox_NombresEstudiantes.Trim() == "")
+            {
+                MessageBox.Show("Llene los campos del estudiantes a registrar",
+                               "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_Cantidad.Focus();
+                return true;
+            }
+            return false;
         }
     }
 }
