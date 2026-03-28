@@ -8,6 +8,23 @@ namespace Prueba_Git
 {
     internal class Estudiante
     {
+        public Estudiante()
+        {
+
+        }
+        public Estudiante(string cedula, string nombre, string apellido, string correo)
+        {
+            Cedula = cedula;
+            Nombre = nombre;
+            Apellido = apellido;
+            Correo = correo;
+        }
+
         public String Cedula{ get; set; }
+        public String Nombre{ get; set; }
+        public String Apellido { get; set; }
+        public string Correo{ get; set; }
+
+        
     }
 }
