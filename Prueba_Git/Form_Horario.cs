@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Prueba_Git
 {
-    public partial class Form_Estudiantes : Form
+    public partial class Form_Horario : Form
     {
-        public Form_Estudiantes()
+        public Form_Horario()
         {
             InitializeComponent();
-        }
-
-        private void Form_Estudiantes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

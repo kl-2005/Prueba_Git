@@ -1,6 +1,6 @@
 ﻿namespace Prueba_Git
 {
-    partial class Form_Estudiantes
+    partial class Form_Estudiante
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 39);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -105,13 +105,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(394, 336);
             this.dataGridView1.TabIndex = 5;
             // 
-            // Form_Estudiantes
+            // Form_Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox_Estudiantes);
-            this.Name = "Form_Estudiantes";
+            this.Name = "Form_Estudiante";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form_Estudiantes_Load);
             this.groupBox_Estudiantes.ResumeLayout(false);
