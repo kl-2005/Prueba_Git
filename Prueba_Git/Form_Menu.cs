@@ -29,7 +29,7 @@ namespace Prueba_Git
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form_Horario venta_ horario= new Form_Horario();
+            Form_Horario venta_horario= new Form_Horario();
             venta_horario.ShowDialog();
         }
 
