@@ -16,5 +16,10 @@ namespace Prueba_Git
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
