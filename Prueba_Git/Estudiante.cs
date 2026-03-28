@@ -8,5 +8,6 @@ namespace Prueba_Git
 {
     internal class Estudiante
     {
+        public String Cedula{ get; set; }
     }
 }
