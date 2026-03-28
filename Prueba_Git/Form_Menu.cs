@@ -44,5 +44,11 @@ namespace Prueba_Git
             Form_Tutor venta_Tutor = new Form_Tutor();
             venta_Tutor.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form_Inscripciones ventana_Incripcion=new Form_Inscripciones();
+            ventana_Incripcion.ShowDialog();
+        }
     }
 }

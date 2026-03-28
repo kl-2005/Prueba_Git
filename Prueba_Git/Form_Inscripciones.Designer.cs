@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Incribir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -54,7 +54,7 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dataGridView3);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button_Incribir);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.Controls.Add(this.dataGridView1);
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1206, 687);
+            this.groupBox1.Size = new System.Drawing.Size(1206, 735);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -87,15 +87,15 @@
             this.dataGridView3.Size = new System.Drawing.Size(492, 232);
             this.dataGridView3.TabIndex = 11;
             // 
-            // button1
+            // button_Incribir
             // 
-            this.button1.Location = new System.Drawing.Point(823, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 42);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Incribir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Incribir.Location = new System.Drawing.Point(823, 89);
+            this.button_Incribir.Name = "button_Incribir";
+            this.button_Incribir.Size = new System.Drawing.Size(123, 42);
+            this.button_Incribir.TabIndex = 10;
+            this.button_Incribir.Text = "Incribir";
+            this.button_Incribir.UseVisualStyleBackColor = true;
+            this.button_Incribir.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -131,9 +131,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(33, 430);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.Size = new System.Drawing.Size(140, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "selecciona tutor";
+            this.label3.Text = "selecciona Horario";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 737);
+            this.ClientSize = new System.Drawing.Size(1226, 773);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Inscripciones";
             this.Text = "Form1";
@@ -206,7 +206,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Incribir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label5;
