@@ -48,6 +48,7 @@
             this.button_ResgistrarEstudiante.TabIndex = 0;
             this.button_ResgistrarEstudiante.Text = "Registrar";
             this.button_ResgistrarEstudiante.UseVisualStyleBackColor = true;
+            this.button_ResgistrarEstudiante.Click += new System.EventHandler(this.button_ResgistrarEstudiante_Click);
             // 
             // label1
             // 
