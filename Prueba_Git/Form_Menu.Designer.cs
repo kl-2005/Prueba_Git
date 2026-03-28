@@ -109,7 +109,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(230, 157);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 56);
+            this.button2.Size = new System.Drawing.Size(141, 60);
             this.button2.TabIndex = 7;
             this.button2.Text = "Registrar tutor";
             this.button2.UseVisualStyleBackColor = true;
