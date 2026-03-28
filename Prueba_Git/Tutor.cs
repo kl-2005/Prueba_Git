@@ -20,8 +20,8 @@ namespace Prueba_Git
             Asignatura = asignatura;
         }
 
-        public String Cedula{ get; set; }
-        public String Nombre{ get; set; }
-        public String Asignatura{ get; set; }
+        public string Cedula{ get; set; }
+        public string Nombre{ get; set; }
+        public string Asignatura{ get; set; }   //olaaa
     }
 }

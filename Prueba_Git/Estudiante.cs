@@ -20,9 +20,9 @@ namespace Prueba_Git
             Correo = correo;
         }
 
-        public String Cedula{ get; set; }
-        public String Nombre{ get; set; }
-        public String Apellido { get; set; }
+        public string Cedula{ get; set; }
+        public string Nombre{ get; set; }
+        public string Apellido { get; set; }
         public string Correo{ get; set; }
 
         
