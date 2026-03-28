@@ -12,6 +12,7 @@ namespace Prueba_Git
         public int Id{ get; set; }
         public ArrayList Estudiante{ get; set; }
         public int Cupos{ get; set; }
-
+        public List<Estudiante> ListaEstudiantes{ get; set; }
+        
     }
 }
