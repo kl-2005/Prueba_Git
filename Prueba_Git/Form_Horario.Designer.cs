@@ -30,13 +30,13 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_RegistrarHorario = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox_Dia = new System.Windows.Forms.ComboBox();
+            this.comboBox_Hora = new System.Windows.Forms.ComboBox();
+            this.textBox_Aula = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -45,11 +45,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.textBox_Aula);
+            this.groupBox1.Controls.Add(this.comboBox_Hora);
+            this.groupBox1.Controls.Add(this.comboBox_Dia);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button_RegistrarHorario);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -70,14 +70,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(427, 331);
             this.dataGridView1.TabIndex = 7;
             // 
-            // button1
+            // button_RegistrarHorario
             // 
-            this.button1.Location = new System.Drawing.Point(79, 229);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 39);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_RegistrarHorario.Location = new System.Drawing.Point(79, 229);
+            this.button_RegistrarHorario.Name = "button_RegistrarHorario";
+            this.button_RegistrarHorario.Size = new System.Drawing.Size(95, 39);
+            this.button_RegistrarHorario.TabIndex = 6;
+            this.button_RegistrarHorario.Text = "Registrar";
+            this.button_RegistrarHorario.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -107,28 +107,28 @@
             this.label1.Text = "Dia";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // comboBox_Dia
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(169, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 8;
+            this.comboBox_Dia.FormattingEnabled = true;
+            this.comboBox_Dia.Location = new System.Drawing.Point(169, 62);
+            this.comboBox_Dia.Name = "comboBox_Dia";
+            this.comboBox_Dia.Size = new System.Drawing.Size(121, 28);
+            this.comboBox_Dia.TabIndex = 8;
             // 
-            // comboBox2
+            // comboBox_Hora
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(169, 108);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 9;
+            this.comboBox_Hora.FormattingEnabled = true;
+            this.comboBox_Hora.Location = new System.Drawing.Point(169, 108);
+            this.comboBox_Hora.Name = "comboBox_Hora";
+            this.comboBox_Hora.Size = new System.Drawing.Size(121, 28);
+            this.comboBox_Hora.TabIndex = 9;
             // 
-            // textBox1
+            // textBox_Aula
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 26);
-            this.textBox1.TabIndex = 10;
+            this.textBox_Aula.Location = new System.Drawing.Point(169, 155);
+            this.textBox_Aula.Name = "textBox_Aula";
+            this.textBox_Aula.Size = new System.Drawing.Size(121, 26);
+            this.textBox_Aula.TabIndex = 10;
             // 
             // label4
             // 
@@ -158,13 +158,13 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_RegistrarHorario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_Hora;
+        private System.Windows.Forms.ComboBox comboBox_Dia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Aula;
     }
 }

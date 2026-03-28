@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_CuposOcupados = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_CuposDisponibles = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Registrar_Tutor = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_NombreTutor = new System.Windows.Forms.TextBox();
+            this.textBox_CedulaTutor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_CapacidadMaxima = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.numericUpDown_CapacidadMaxima);
+            this.groupBox1.Controls.Add(this.textBox_CuposOcupados);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.textBox_CuposDisponibles);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button_Registrar_Tutor);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox_NombreTutor);
+            this.groupBox1.Controls.Add(this.textBox_CedulaTutor);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -71,12 +71,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tutor";
             // 
-            // textBox5
+            // textBox_CuposOcupados
             // 
-            this.textBox5.Location = new System.Drawing.Point(584, 446);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 12;
+            this.textBox_CuposOcupados.Location = new System.Drawing.Point(584, 446);
+            this.textBox_CuposOcupados.Name = "textBox_CuposOcupados";
+            this.textBox_CuposOcupados.Size = new System.Drawing.Size(100, 26);
+            this.textBox_CuposOcupados.TabIndex = 12;
             // 
             // label6
             // 
@@ -87,12 +87,12 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Cupos llenos ";
             // 
-            // textBox4
+            // textBox_CuposDisponibles
             // 
-            this.textBox4.Location = new System.Drawing.Point(572, 332);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 10;
+            this.textBox_CuposDisponibles.Location = new System.Drawing.Point(572, 332);
+            this.textBox_CuposDisponibles.Name = "textBox_CuposDisponibles";
+            this.textBox_CuposDisponibles.Size = new System.Drawing.Size(100, 26);
+            this.textBox_CuposDisponibles.TabIndex = 10;
             // 
             // label5
             // 
@@ -114,14 +114,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(507, 349);
             this.dataGridView1.TabIndex = 8;
             // 
-            // button1
+            // button_Registrar_Tutor
             // 
-            this.button1.Location = new System.Drawing.Point(348, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 31);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Registrar_Tutor.Location = new System.Drawing.Point(348, 175);
+            this.button_Registrar_Tutor.Name = "button_Registrar_Tutor";
+            this.button_Registrar_Tutor.Size = new System.Drawing.Size(114, 31);
+            this.button_Registrar_Tutor.TabIndex = 7;
+            this.button_Registrar_Tutor.Text = "Registrar";
+            this.button_Registrar_Tutor.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -132,19 +132,19 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Capacidad maxima\r\n\r\n";
             // 
-            // textBox2
+            // textBox_NombreTutor
             // 
-            this.textBox2.Location = new System.Drawing.Point(304, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 26);
-            this.textBox2.TabIndex = 4;
+            this.textBox_NombreTutor.Location = new System.Drawing.Point(304, 106);
+            this.textBox_NombreTutor.Name = "textBox_NombreTutor";
+            this.textBox_NombreTutor.Size = new System.Drawing.Size(206, 26);
+            this.textBox_NombreTutor.TabIndex = 4;
             // 
-            // textBox1
+            // textBox_CedulaTutor
             // 
-            this.textBox1.Location = new System.Drawing.Point(43, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 3;
+            this.textBox_CedulaTutor.Location = new System.Drawing.Point(43, 106);
+            this.textBox_CedulaTutor.Name = "textBox_CedulaTutor";
+            this.textBox_CedulaTutor.Size = new System.Drawing.Size(200, 26);
+            this.textBox_CedulaTutor.TabIndex = 3;
             // 
             // label3
             // 
@@ -172,12 +172,12 @@
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
             // 
-            // numericUpDown1
+            // numericUpDown_CapacidadMaxima
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(191, 175);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 13;
+            this.numericUpDown_CapacidadMaxima.Location = new System.Drawing.Point(191, 175);
+            this.numericUpDown_CapacidadMaxima.Name = "numericUpDown_CapacidadMaxima";
+            this.numericUpDown_CapacidadMaxima.Size = new System.Drawing.Size(120, 26);
+            this.numericUpDown_CapacidadMaxima.TabIndex = 13;
             // 
             // label7
             // 
@@ -199,7 +199,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,15 +211,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_NombreTutor;
+        private System.Windows.Forms.TextBox textBox_CedulaTutor;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button_Registrar_Tutor;
+        private System.Windows.Forms.TextBox textBox_CuposOcupados;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_CuposDisponibles;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_CapacidadMaxima;
         private System.Windows.Forms.Label label7;
     }
 }

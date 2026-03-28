@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_ResgistrarEstudiante = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_CedulaEstudiantes = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox_Estudiantes = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Estudiantes = new System.Windows.Forms.DataGridView();
+            this.textBox_NombresEstudiantes = new System.Windows.Forms.TextBox();
             this.groupBox_Estudiantes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Estudiantes)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // button_ResgistrarEstudiante
             // 
-            this.button1.Location = new System.Drawing.Point(41, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_ResgistrarEstudiante.Location = new System.Drawing.Point(41, 279);
+            this.button_ResgistrarEstudiante.Name = "button_ResgistrarEstudiante";
+            this.button_ResgistrarEstudiante.Size = new System.Drawing.Size(98, 39);
+            this.button_ResgistrarEstudiante.TabIndex = 0;
+            this.button_ResgistrarEstudiante.Text = "Registrar";
+            this.button_ResgistrarEstudiante.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -57,12 +57,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cedula";
             // 
-            // textBox1
+            // textBox_CedulaEstudiantes
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 2;
+            this.textBox_CedulaEstudiantes.Location = new System.Drawing.Point(39, 87);
+            this.textBox_CedulaEstudiantes.Name = "textBox_CedulaEstudiantes";
+            this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(100, 26);
+            this.textBox_CedulaEstudiantes.TabIndex = 2;
             // 
             // label2
             // 
@@ -74,21 +74,14 @@
             this.label2.Text = "Nombres y Apellidos";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(39, 206);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 4;
-            // 
             // groupBox_Estudiantes
             // 
-            this.groupBox_Estudiantes.Controls.Add(this.dataGridView1);
-            this.groupBox_Estudiantes.Controls.Add(this.button1);
-            this.groupBox_Estudiantes.Controls.Add(this.textBox2);
+            this.groupBox_Estudiantes.Controls.Add(this.textBox_NombresEstudiantes);
+            this.groupBox_Estudiantes.Controls.Add(this.dataGridView_Estudiantes);
+            this.groupBox_Estudiantes.Controls.Add(this.button_ResgistrarEstudiante);
             this.groupBox_Estudiantes.Controls.Add(this.label1);
             this.groupBox_Estudiantes.Controls.Add(this.label2);
-            this.groupBox_Estudiantes.Controls.Add(this.textBox1);
+            this.groupBox_Estudiantes.Controls.Add(this.textBox_CedulaEstudiantes);
             this.groupBox_Estudiantes.Location = new System.Drawing.Point(24, 27);
             this.groupBox_Estudiantes.Name = "groupBox_Estudiantes";
             this.groupBox_Estudiantes.Size = new System.Drawing.Size(764, 411);
@@ -96,15 +89,22 @@
             this.groupBox_Estudiantes.TabStop = false;
             this.groupBox_Estudiantes.Text = "Estudiantes";
             // 
-            // dataGridView1
+            // dataGridView_Estudiantes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(394, 336);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView_Estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(303, 25);
+            this.dataGridView_Estudiantes.Name = "dataGridView_Estudiantes";
+            this.dataGridView_Estudiantes.RowHeadersWidth = 62;
+            this.dataGridView_Estudiantes.RowTemplate.Height = 28;
+            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(394, 336);
+            this.dataGridView_Estudiantes.TabIndex = 5;
+            // 
+            // textBox_NombresEstudiantes
+            // 
+            this.textBox_NombresEstudiantes.Location = new System.Drawing.Point(41, 210);
+            this.textBox_NombresEstudiantes.Name = "textBox_NombresEstudiantes";
+            this.textBox_NombresEstudiantes.Size = new System.Drawing.Size(100, 26);
+            this.textBox_NombresEstudiantes.TabIndex = 6;
             // 
             // Form_Estudiante
             // 
@@ -117,19 +117,19 @@
             this.Load += new System.EventHandler(this.Form_Estudiantes_Load);
             this.groupBox_Estudiantes.ResumeLayout(false);
             this.groupBox_Estudiantes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Estudiantes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_ResgistrarEstudiante;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_CedulaEstudiantes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox_Estudiantes;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_Estudiantes;
+        private System.Windows.Forms.TextBox textBox_NombresEstudiantes;
     }
 }
