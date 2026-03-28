@@ -22,6 +22,7 @@ namespace Prueba_Git
 
         public string Cedula{ get; set; }
         public string Nombre{ get; set; }
-        public string Asignatura{ get; set; }   //olaaa
+        public string Asignatura{ get; set; }   //olaaa 
+        //ola
     }
 }
