@@ -33,6 +33,7 @@
             this.textBox_CedulaEstudiantes = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox_Estudiantes = new System.Windows.Forms.GroupBox();
+            this.button_Buscar = new System.Windows.Forms.Button();
             this.textBox_ApellidosEstudiantes = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_NombreEstudiantes = new System.Windows.Forms.TextBox();
@@ -80,6 +81,7 @@
             // 
             // groupBox_Estudiantes
             // 
+            this.groupBox_Estudiantes.Controls.Add(this.button_Buscar);
             this.groupBox_Estudiantes.Controls.Add(this.textBox_ApellidosEstudiantes);
             this.groupBox_Estudiantes.Controls.Add(this.label3);
             this.groupBox_Estudiantes.Controls.Add(this.textBox_NombreEstudiantes);
@@ -94,6 +96,16 @@
             this.groupBox_Estudiantes.TabIndex = 5;
             this.groupBox_Estudiantes.TabStop = false;
             this.groupBox_Estudiantes.Text = "Estudiantes";
+            // 
+            // button_Buscar
+            // 
+            this.button_Buscar.Location = new System.Drawing.Point(159, 356);
+            this.button_Buscar.Name = "button_Buscar";
+            this.button_Buscar.Size = new System.Drawing.Size(75, 30);
+            this.button_Buscar.TabIndex = 9;
+            this.button_Buscar.Text = "Buscar";
+            this.button_Buscar.UseVisualStyleBackColor = true;
+            this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click);
             // 
             // textBox_ApellidosEstudiantes
             // 
@@ -157,5 +169,6 @@
         private System.Windows.Forms.TextBox textBox_NombreEstudiantes;
         private System.Windows.Forms.TextBox textBox_ApellidosEstudiantes;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button_Buscar;
     }
 }

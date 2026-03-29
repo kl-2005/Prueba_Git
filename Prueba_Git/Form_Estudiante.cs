@@ -51,9 +51,9 @@ namespace Prueba_Git
         {
             DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
             MessageBox.Show("Estudiante registrado correctamente");
-            textBox_CedulaEstudiantes.Text = "";
-            textBox_NombreEstudiantes.Text = "";
-            textBox_ApellidosEstudiantes.Text = "";
+            textBox_CedulaEstudiantes.Clear();
+            textBox_NombreEstudiantes.Clear();
+            textBox_ApellidosEstudiantes.Clear();
             textBox_CedulaEstudiantes.Focus();
             MostrarEstudiantes();
         }
@@ -118,6 +118,7 @@ namespace Prueba_Git
         }
 
 
+
         private void dataGridView_Estudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -126,6 +127,41 @@ namespace Prueba_Git
         private void textBox_ApellidosEstudiantes_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_Buscar_Click(object sender, EventArgs e)
+        {
+            string cedula =textBox_CedulaEstudiantes.Text.Trim();
+
+            if (cedula.Trim() == "" && !ValidarCedula10Digitos(cedula))
+            {
+                MessageBox.Show("InIngrese la cédula del estudiante a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+
+            bool encontrado = false;
+            foreach (var item in DatosGlobales.Estudiantes) 
+            {
+                if (item.Cedula==cedula) 
+                {
+                    textBox_NombreEstudiantes.Text = item.Nombre;
+                    textBox_ApellidosEstudiantes.Text = item.Apellido;
+
+                    encontrado = true;
+                    break;
+
+                }
+            }
+
+
+            if (!encontrado)
+            {
+                MessageBox.Show("No se encontró ningún estudiante con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox_NombreEstudiantes.Clear();
+                textBox_ApellidosEstudiantes.Clear();
+                textBox_CedulaEstudiantes.Focus();
+            }
         }
     }
 }
