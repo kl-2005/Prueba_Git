@@ -15,6 +15,7 @@ namespace Prueba_Git
         public Form_Tutor()
         {
             InitializeComponent();
+            MostrarTutor();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -22,9 +23,29 @@ namespace Prueba_Git
 
         }
 
-        private void textBox_CedulaTutor_TextChanged(object sender, EventArgs e)
+        private void button_RegistrarTutor_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+            if (!ValidarCedulaUnica()) return;
+            AgregarEstudiante();
 
+        }
+
+        private void AgregarEstudiante()
+        {
+            DatosGlobales.Tutores.Add(new Tutor(textBox_CedulaTutor.Text, textBox_NombreTutor.Text, Convert.ToInt32(numericUpDown_CapacidadMaxima.Value),Convert.ToInt32(numericUpDown_CapacidadMaxima.Value)));
+            MessageBox.Show("Tutor registrado correctamente");
+            textBox_CedulaTutor.Text = "";
+            textBox_NombreTutor.Text = "";
+            numericUpDown_CapacidadMaxima.Value = 0;
+            textBox_CedulaTutor.Focus();
+            MostrarTutor();
+        }
+
+        private void MostrarTutor()
+        {
+            dataGridView_Tutor.DataSource = null;
+            dataGridView_Tutor.DataSource = DatosGlobales.Tutores;
         }
 
         public bool ValidarCampos()
@@ -35,6 +56,27 @@ namespace Prueba_Git
                 return false;
             }
             return true;
+        }
+        private bool ValidarCedulaUnica()
+        {
+            foreach (var item in DatosGlobales.Tutores)
+            {
+                if (item.Cedula == textBox_CedulaTutor.Text)
+                {
+                    MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox_CedulaTutor.Clear();
+                    textBox_NombreTutor.Clear();
+                    numericUpDown_CapacidadMaxima.Value = 0;
+                    textBox_CedulaTutor.Focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void textBox_CedulaTutor_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

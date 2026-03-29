@@ -14,16 +14,16 @@ namespace Prueba_Git
             
         }
 
-        public Tutor(string cedula, string nombre, string asignatura)
+        public Tutor(string cedula, string nombre, int cupo_Maximo, int cupo_Disponible)
         {
             Cedula = cedula;
             Nombre = nombre;
-            Asignatura = asignatura;
+            Cupo_Maximo = cupo_Maximo;
+            Cupo_Disponible = cupo_Disponible;
         }
 
         public string Cedula { get; set; }
         public string Nombre { get; set; }
-        public string Asignatura { get; set; }
         public int Cupo_Maximo {get; set; }
         public int Cupo_Disponible { get; set; }
         public List<Estudiante> ListaEstudiantes { get; set; }
