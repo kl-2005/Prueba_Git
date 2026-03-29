@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Principal));
             this.groupBox_Menu = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
             this.groupBox_Menu.Controls.Add(this.button1);
             this.groupBox_Menu.Location = new System.Drawing.Point(23, 53);
             this.groupBox_Menu.Name = "groupBox_Menu";
-            this.groupBox_Menu.Size = new System.Drawing.Size(564, 475);
+            this.groupBox_Menu.Size = new System.Drawing.Size(780, 270);
             this.groupBox_Menu.TabIndex = 0;
             this.groupBox_Menu.TabStop = false;
             this.groupBox_Menu.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -72,7 +73,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(230, 376);
+            this.button4.Location = new System.Drawing.Point(593, 162);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(138, 51);
             this.button4.TabIndex = 11;
@@ -82,7 +83,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(40, 350);
+            this.pictureBox4.Location = new System.Drawing.Point(412, 133);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(140, 98);
             this.pictureBox4.TabIndex = 10;
@@ -90,7 +91,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(230, 263);
+            this.button3.Location = new System.Drawing.Point(590, 50);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(141, 70);
             this.button3.TabIndex = 9;
@@ -100,7 +101,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(40, 236);
+            this.pictureBox3.Location = new System.Drawing.Point(412, 25);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(140, 97);
             this.pictureBox3.TabIndex = 8;
@@ -138,7 +139,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(248, 22);
+            this.label1.Location = new System.Drawing.Point(339, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 28);
             this.label1.TabIndex = 1;
@@ -148,9 +149,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 738);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(839, 340);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_Menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Principal";
             this.Text = "Tutorias";
