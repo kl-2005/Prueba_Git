@@ -68,12 +68,12 @@
             // 
             // button_Agregar
             // 
-            this.button_Agregar.Location = new System.Drawing.Point(728, 99);
+            this.button_Agregar.Location = new System.Drawing.Point(506, 89);
             this.button_Agregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_Agregar.Name = "button_Agregar";
             this.button_Agregar.Size = new System.Drawing.Size(106, 34);
             this.button_Agregar.TabIndex = 16;
-            this.button_Agregar.Text = "Agregar";
+            this.button_Agregar.Text = "Inscribir";
             this.button_Agregar.UseVisualStyleBackColor = true;
             this.button_Agregar.Click += new System.EventHandler(this.button_Agregar_Click);
             // 
@@ -125,11 +125,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(848, 22);
+            this.label4.Location = new System.Drawing.Point(522, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "acciones";
+            this.label4.Text = "Acciones";
             // 
             // dataGridView1
             // 

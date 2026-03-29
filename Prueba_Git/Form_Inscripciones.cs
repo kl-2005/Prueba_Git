@@ -59,6 +59,8 @@ namespace Prueba_Git
         }
 
 
+
+
         private bool ValidarCampos()
         {
             if (comboBox2.SelectedItem.ToString() == "" || comboBox1.SelectedItem.ToString() =="" || comboBox3.SelectedItem.ToString() =="")
