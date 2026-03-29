@@ -75,5 +75,10 @@ namespace Prueba_Git
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = DatosGlobales.Horarios;
         }
+
+        private void comboBox_Dia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

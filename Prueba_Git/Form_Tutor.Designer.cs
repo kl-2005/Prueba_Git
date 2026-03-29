@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_Buscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).BeginInit();
@@ -45,6 +46,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_Buscar);
             this.groupBox1.Controls.Add(this.numericUpDown_CapacidadMaxima);
             this.groupBox1.Controls.Add(this.dataGridView_Tutor);
             this.groupBox1.Controls.Add(this.button_RegistrarTutor);
@@ -80,7 +82,7 @@
             // 
             // button_RegistrarTutor
             // 
-            this.button_RegistrarTutor.Location = new System.Drawing.Point(380, 168);
+            this.button_RegistrarTutor.Location = new System.Drawing.Point(331, 158);
             this.button_RegistrarTutor.Name = "button_RegistrarTutor";
             this.button_RegistrarTutor.Size = new System.Drawing.Size(100, 45);
             this.button_RegistrarTutor.TabIndex = 7;
@@ -138,6 +140,16 @@
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
             // 
+            // button_Buscar
+            // 
+            this.button_Buscar.Location = new System.Drawing.Point(458, 169);
+            this.button_Buscar.Name = "button_Buscar";
+            this.button_Buscar.Size = new System.Drawing.Size(93, 34);
+            this.button_Buscar.TabIndex = 14;
+            this.button_Buscar.Text = "Buscar";
+            this.button_Buscar.UseVisualStyleBackColor = true;
+            this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click);
+            // 
             // Form_Tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -166,5 +178,6 @@
         private System.Windows.Forms.DataGridView dataGridView_Tutor;
         private System.Windows.Forms.Button button_RegistrarTutor;
         private System.Windows.Forms.NumericUpDown numericUpDown_CapacidadMaxima;
+        private System.Windows.Forms.Button button_Buscar;
     }
 }
