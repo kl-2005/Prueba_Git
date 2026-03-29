@@ -12,21 +12,68 @@ namespace Prueba_Git
 {
     public partial class Form_Horario : Form
     {
-        
         public Form_Horario()
         {
             InitializeComponent();
             CargarDiasInscripcion();
+            CargarHorasTutorias();
+            MostrarHorario();
         }
 
         private void CargarDiasInscripcion()
         {
-            comboBox_Dia.Items.Add(new String[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes" });
+            string[] diasTutorias = new String[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes" };
+            comboBox_Dia.Items.AddRange(diasTutorias);
+        }
+
+        private void CargarHorasTutorias()
+        {
+            string[] horasTutorias = new String[] { "8:00 - 9:00", "9:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00" };
+            comboBox_Hora.Items.AddRange(horasTutorias);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_RegistrarHorario_Click(object sender, EventArgs e)
+        {
+            if (!ValidarCampos()) return;
+            GuardarHorario();
+        }
+
+        private bool ValidarCampos()
+        {
+            string Dia = comboBox_Dia.SelectedItem.ToString();
+            string hora = comboBox_Hora.SelectedItem.ToString();
+            if (Dia.Trim()=="" || hora.Trim()=="" || textBox_Aula.Text.Trim() == "")
+            {
+                MessageBox.Show("Valide que todos los campos esten llenos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private void GuardarHorario()
+        {
+            string Dia = comboBox_Dia.SelectedItem.ToString();
+            string hora = comboBox_Hora.SelectedItem.ToString();
+            foreach (var item in DatosGlobales.Horarios)
+            {
+                if (item.Dia == Dia && item.Hora == hora){
+                    MessageBox.Show("Ya existe un horario registrado para ese día y hora", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            DatosGlobales.Horarios.Add(new Horario(comboBox_Dia.SelectedItem.ToString(), comboBox_Hora.SelectedItem.ToString(), textBox_Aula.Text));
+            MostrarHorario();
+        }
+
+        private void MostrarHorario()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = DatosGlobales.Horarios;
         }
     }
 }
