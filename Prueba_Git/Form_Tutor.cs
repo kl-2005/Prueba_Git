@@ -135,9 +135,9 @@ namespace Prueba_Git
             if (!encontrado)
             {
                 MessageBox.Show("No se encontró ningún estudiante con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_NombreEstudiantes.Clear();
-                textBox_ApellidosEstudiantes.Clear();
-                textBox_CedulaEstudiantes.Focus();
+                textBox_NombreTutor.Clear();
+                textBox_CedulaTutor.Clear();
+                textBox_CedulaTutor.Focus();
             }
         }
     }
