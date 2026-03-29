@@ -163,5 +163,10 @@ namespace Prueba_Git
                 textBox_CedulaEstudiantes.Focus();
             }
         }
+
+        private void groupBox_Estudiantes_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

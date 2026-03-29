@@ -59,5 +59,10 @@ namespace Prueba_Git
         {
             MostrarTutorEstudiante();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

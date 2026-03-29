@@ -96,6 +96,7 @@
             this.groupBox_Estudiantes.TabIndex = 5;
             this.groupBox_Estudiantes.TabStop = false;
             this.groupBox_Estudiantes.Text = "Estudiantes";
+            this.groupBox_Estudiantes.Enter += new System.EventHandler(this.groupBox_Estudiantes_Enter);
             // 
             // button_Buscar
             // 

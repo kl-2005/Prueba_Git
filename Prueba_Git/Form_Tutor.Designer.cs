@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_Buscar = new System.Windows.Forms.Button();
             this.numericUpDown_CapacidadMaxima = new System.Windows.Forms.NumericUpDown();
             this.dataGridView_Tutor = new System.Windows.Forms.DataGridView();
             this.button_RegistrarTutor = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_Buscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).BeginInit();
@@ -62,6 +62,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tutor";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button_Buscar
+            // 
+            this.button_Buscar.Location = new System.Drawing.Point(458, 169);
+            this.button_Buscar.Name = "button_Buscar";
+            this.button_Buscar.Size = new System.Drawing.Size(93, 34);
+            this.button_Buscar.TabIndex = 14;
+            this.button_Buscar.Text = "Buscar";
+            this.button_Buscar.UseVisualStyleBackColor = true;
+            this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click);
             // 
             // numericUpDown_CapacidadMaxima
             // 
@@ -140,16 +151,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
-            // 
-            // button_Buscar
-            // 
-            this.button_Buscar.Location = new System.Drawing.Point(458, 169);
-            this.button_Buscar.Name = "button_Buscar";
-            this.button_Buscar.Size = new System.Drawing.Size(93, 34);
-            this.button_Buscar.TabIndex = 14;
-            this.button_Buscar.Text = "Buscar";
-            this.button_Buscar.UseVisualStyleBackColor = true;
-            this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click);
             // 
             // Form_Tutor
             // 
