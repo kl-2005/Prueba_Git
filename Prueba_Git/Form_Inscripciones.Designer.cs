@@ -35,7 +35,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView_Inscripciones = new System.Windows.Forms.DataGridView();
-            this.button_Incribir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dataGridView_Inscripciones);
-            this.groupBox1.Controls.Add(this.button_Incribir);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label3);
@@ -123,16 +121,6 @@
             this.dataGridView_Inscripciones.Size = new System.Drawing.Size(492, 232);
             this.dataGridView_Inscripciones.TabIndex = 11;
             this.dataGridView_Inscripciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // button_Incribir
-            // 
-            this.button_Incribir.Location = new System.Drawing.Point(490, 103);
-            this.button_Incribir.Name = "button_Incribir";
-            this.button_Incribir.Size = new System.Drawing.Size(123, 42);
-            this.button_Incribir.TabIndex = 10;
-            this.button_Incribir.Text = "Incribir";
-            this.button_Incribir.UseVisualStyleBackColor = true;
-            this.button_Incribir.Click += new System.EventHandler(this.button_Incribir_Click);
             // 
             // label4
             // 
@@ -204,7 +192,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView_Inscripciones;
-        private System.Windows.Forms.Button button_Incribir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox2;
