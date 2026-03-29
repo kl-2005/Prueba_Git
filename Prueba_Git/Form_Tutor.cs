@@ -63,7 +63,7 @@ namespace Prueba_Git
             catch(Exception e) 
             {
                 
-                    MessageBox.Show("Error al agregar el tutor:: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al agregar el tutor: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
              }
