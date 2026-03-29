@@ -44,6 +44,18 @@ namespace Prueba_Git
                 horario.Dia + " " + horario.Hora
             ));
             dataGridView1.DataSource = DatosGlobales.Inscripciones;
+
+            var datos = from Tutor in DatosGlobales.Tutores
+                        select new
+                        {
+                            Tutor = tutor.Nombre,
+                            CuposTotales = tutor.Cupo_Disponible,
+                            CuposDisponibles = tutor.Cupo_Disponible -
+                                DatosGlobales.Inscripciones.Count(i => i.Tutor == tutor.Nombre)
+                        };
+
+            dataGridView_Inscripciones.DataSource = null;
+            dataGridView_Inscripciones.DataSource = datos.ToList();
         }
 
         private bool ValidarCampos()
