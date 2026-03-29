@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDown_CapacidadMaxima = new System.Windows.Forms.NumericUpDown();
             this.textBox_CuposOcupados = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_CuposDisponibles = new System.Windows.Forms.TextBox();
@@ -41,11 +43,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown_CapacidadMaxima = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,6 +70,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tutor";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(584, 216);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 20);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Estadisticas de cupos";
+            // 
+            // numericUpDown_CapacidadMaxima
+            // 
+            this.numericUpDown_CapacidadMaxima.Location = new System.Drawing.Point(191, 175);
+            this.numericUpDown_CapacidadMaxima.Name = "numericUpDown_CapacidadMaxima";
+            this.numericUpDown_CapacidadMaxima.Size = new System.Drawing.Size(120, 26);
+            this.numericUpDown_CapacidadMaxima.TabIndex = 13;
             // 
             // textBox_CuposOcupados
             // 
@@ -145,6 +161,7 @@
             this.textBox_CedulaTutor.Name = "textBox_CedulaTutor";
             this.textBox_CedulaTutor.Size = new System.Drawing.Size(200, 26);
             this.textBox_CedulaTutor.TabIndex = 3;
+            this.textBox_CedulaTutor.TextChanged += new System.EventHandler(this.textBox_CedulaTutor_TextChanged);
             // 
             // label3
             // 
@@ -172,22 +189,6 @@
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
             // 
-            // numericUpDown_CapacidadMaxima
-            // 
-            this.numericUpDown_CapacidadMaxima.Location = new System.Drawing.Point(191, 175);
-            this.numericUpDown_CapacidadMaxima.Name = "numericUpDown_CapacidadMaxima";
-            this.numericUpDown_CapacidadMaxima.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown_CapacidadMaxima.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(584, 216);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 20);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Estadisticas de cupos";
-            // 
             // Form_Tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -198,8 +199,8 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tutor)).EndInit();
             this.ResumeLayout(false);
 
         }

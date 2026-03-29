@@ -21,5 +21,20 @@ namespace Prueba_Git
         {
 
         }
+
+        private void textBox_CedulaTutor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public bool ValidarCampos()
+        {
+            if (textBox_CedulaTutor.Text.Trim() == "" || textBox_NombreTutor.Text.Trim() == "" || textBox_ApellidosEstudiantes.Text.Trim() == "")
+            {
+                MessageBox.Show("Valide que todos los campos esten llenos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
     }
 }
