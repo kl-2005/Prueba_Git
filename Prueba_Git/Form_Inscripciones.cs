@@ -30,10 +30,7 @@ namespace Prueba_Git
             String estudiante = (String)comboBox1.SelectedItem;
             String tutor = (String)comboBox2.SelectedItem;
 
-            listaInscripciones.Add(new Inscripcion(
-                estudiante.NombreCompleto,
-                tutor.Nombre
-            ));
+            listaInscripciones.Add(new Inscripcion(estudiante.NombreCompleto,tutor.Nombre));
 
             dataGridView1.DataSource = listaInscripciones;
         }

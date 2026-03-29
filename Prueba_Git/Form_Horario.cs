@@ -39,35 +39,60 @@ namespace Prueba_Git
 
         private void button_RegistrarHorario_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos()) return;
-            GuardarHorario();
+            try
+            {
+                if (!ValidarCampos())
+                    return;
+
+                GuardarHorario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private bool ValidarCampos()
         {
-            string Dia = comboBox_Dia.SelectedItem.ToString();
-            string hora = comboBox_Hora.SelectedItem.ToString();
-            if (Dia.Trim()=="" || hora.Trim()=="" || textBox_Aula.Text.Trim() == "")
+            try
             {
-                MessageBox.Show("Valide que todos los campos esten llenos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (comboBox_Dia.SelectedItem == null || comboBox_Hora.SelectedItem == null || string.IsNullOrWhiteSpace(textBox_Aula.Text))
+                {
+                    MessageBox.Show("Valide que todos los campos estén llenos", "Corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al validar los campos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            return true;
         }
 
         private void GuardarHorario()
         {
-            string Dia = comboBox_Dia.SelectedItem.ToString();
-            string hora = comboBox_Hora.SelectedItem.ToString();
-            foreach (var item in DatosGlobales.Horarios)
+            try
             {
-                if (item.Dia == Dia && item.Hora == hora){
-                    MessageBox.Show("Ya existe un horario registrado para ese día y hora", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                string Dia = comboBox_Dia.SelectedItem.ToString();
+                string hora = comboBox_Hora.SelectedItem.ToString();
+
+                foreach (var item in DatosGlobales.Horarios)
+                {
+                    if (item.Dia == Dia && item.Hora == hora)
+                    {
+                        MessageBox.Show("Ya existe un horario registrado ", "Corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
+
+                DatosGlobales.Horarios.Add(new Horario(Dia, hora, textBox_Aula.Text));
+                MostrarHorario();
             }
-            DatosGlobales.Horarios.Add(new Horario(comboBox_Dia.SelectedItem.ToString(), comboBox_Hora.SelectedItem.ToString(), textBox_Aula.Text));
-            MostrarHorario();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MostrarHorario()
