@@ -19,6 +19,7 @@ namespace Prueba_Git
             CargarEstudiantesComboBox();
             CargarTutoresComboBox();
             CargarHorariosComboBox();
+            CargarTablas();
         }
 
         private void CargarHorariosComboBox()
@@ -28,7 +29,7 @@ namespace Prueba_Git
             comboBox3.DisplayMember = "HorarioCompleto";
         }
 
-        private void MostrarTutorEstudiante()
+        private void RegistrarInscripcion()
         {
             if (!ValidarCampos()) return;
 
@@ -38,7 +39,8 @@ namespace Prueba_Git
 
             string horarioSeleccionado = horario.Dia + " " + horario.Hora;
 
-            bool yaInscrito = DatosGlobales.Inscripciones.Any(i => i.Estudiante == estudiante.NombreCompleto);
+            bool yaInscrito = DatosGlobales.Inscripciones
+                .Any(i => i.Estudiante == estudiante.NombreCompleto);
 
             if (yaInscrito)
             {
@@ -46,7 +48,8 @@ namespace Prueba_Git
                 return;
             }
 
-            int inscritos = DatosGlobales.Inscripciones.Count(i => i.Tutor == tutor.Nombre);
+            int inscritos = DatosGlobales.Inscripciones
+                .Count(i => i.Tutor == tutor.Nombre);
 
             if (inscritos >= tutor.Cupo_Disponible)
             {
@@ -60,6 +63,11 @@ namespace Prueba_Git
                 horarioSeleccionado
             ));
 
+            CargarTablas();
+        }
+
+        private void CargarTablas()
+        {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = DatosGlobales.Inscripciones;
 
@@ -67,8 +75,8 @@ namespace Prueba_Git
                         select new
                         {
                             Tutor = t.Nombre,
-                            CuposTotales = t.Cupo_Disponible,
-                            CuposDisponibles = t.Cupo_Disponible -
+                            CuposTotales = t.Cupo_Maximo,
+                            CuposDisponibles = t.Cupo_Maximo -
                                 DatosGlobales.Inscripciones.Count(i => i.Tutor == t.Nombre)
                         };
 
@@ -136,7 +144,7 @@ namespace Prueba_Git
 
         private void button_Inscribir_Click(object sender, EventArgs e)
         {
-            MostrarTutorEstudiante();
+            RegistrarInscripcion();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
