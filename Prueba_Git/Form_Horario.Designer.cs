@@ -59,9 +59,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(29, 34);
+            this.groupBox1.Location = new System.Drawing.Point(32, 36);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(579, 213);
+            this.groupBox1.Size = new System.Drawing.Size(643, 224);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL HORARIO";
@@ -71,43 +71,43 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Prueba_Git.Properties.Resources.daily_task;
-            this.pictureBox1.Location = new System.Drawing.Point(368, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(409, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(199, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // textBox_Aula
             // 
-            this.textBox_Aula.Location = new System.Drawing.Point(170, 155);
+            this.textBox_Aula.Location = new System.Drawing.Point(189, 163);
             this.textBox_Aula.Name = "textBox_Aula";
-            this.textBox_Aula.Size = new System.Drawing.Size(177, 29);
+            this.textBox_Aula.Size = new System.Drawing.Size(196, 29);
             this.textBox_Aula.TabIndex = 10;
             // 
             // comboBox_Hora
             // 
             this.comboBox_Hora.FormattingEnabled = true;
-            this.comboBox_Hora.Location = new System.Drawing.Point(170, 108);
+            this.comboBox_Hora.Location = new System.Drawing.Point(189, 113);
             this.comboBox_Hora.Name = "comboBox_Hora";
-            this.comboBox_Hora.Size = new System.Drawing.Size(177, 29);
+            this.comboBox_Hora.Size = new System.Drawing.Size(196, 29);
             this.comboBox_Hora.TabIndex = 9;
             // 
             // comboBox_Dia
             // 
             this.comboBox_Dia.FormattingEnabled = true;
-            this.comboBox_Dia.Location = new System.Drawing.Point(170, 62);
+            this.comboBox_Dia.Location = new System.Drawing.Point(189, 65);
             this.comboBox_Dia.Name = "comboBox_Dia";
-            this.comboBox_Dia.Size = new System.Drawing.Size(177, 29);
+            this.comboBox_Dia.Size = new System.Drawing.Size(196, 29);
             this.comboBox_Dia.TabIndex = 8;
             this.comboBox_Dia.SelectedIndexChanged += new System.EventHandler(this.comboBox_Dia_SelectedIndexChanged);
             // 
             // button_RegistrarHorario
             // 
             this.button_RegistrarHorario.ForeColor = System.Drawing.Color.Black;
-            this.button_RegistrarHorario.Location = new System.Drawing.Point(385, 155);
+            this.button_RegistrarHorario.Location = new System.Drawing.Point(428, 163);
             this.button_RegistrarHorario.Name = "button_RegistrarHorario";
-            this.button_RegistrarHorario.Size = new System.Drawing.Size(124, 38);
+            this.button_RegistrarHorario.Size = new System.Drawing.Size(138, 40);
             this.button_RegistrarHorario.TabIndex = 6;
             this.button_RegistrarHorario.Text = "REGISTRAR";
             this.button_RegistrarHorario.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 162);
+            this.label3.Location = new System.Drawing.Point(83, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 21);
             this.label3.TabIndex = 2;
@@ -125,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 108);
+            this.label2.Location = new System.Drawing.Point(78, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 21);
             this.label2.TabIndex = 1;
@@ -134,7 +134,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 62);
+            this.label1.Location = new System.Drawing.Point(78, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 21);
             this.label1.TabIndex = 0;
@@ -144,12 +144,13 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(567, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 309);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox2
             // 
@@ -157,21 +158,22 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(29, 272);
+            this.groupBox2.Location = new System.Drawing.Point(32, 286);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(579, 339);
+            this.groupBox2.Size = new System.Drawing.Size(643, 356);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTA DE HORARIOS REGISTRADOS";
             // 
             // Form_Horario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(642, 647);
+            this.ClientSize = new System.Drawing.Size(713, 679);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Horario";
             this.Text = "Registro de Horario";
