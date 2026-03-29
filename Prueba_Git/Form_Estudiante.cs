@@ -37,7 +37,7 @@ namespace Prueba_Git
         {
 
         }
-
+        
         private bool ValidarcedulaUnica(string cedula) 
         { 
             foreach (var item in DatosGlobales.Estudiantes)
