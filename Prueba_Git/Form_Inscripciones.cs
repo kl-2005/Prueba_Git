@@ -49,7 +49,7 @@ namespace Prueba_Git
 
         private bool ValidarCampos()
         {
-            if (comboBox2.SelectedItem.ToString() == "" || comboBox1.SelectedItem.ToString() == "" || comboBox3.SelectedItem.ToString() == "")
+            if (comboBox2.SelectedItem.ToString() == "" || comboBox1.SelectedItem.ToString() =="" || comboBox3.SelectedItem.ToString() =="")
             {
                 MessageBox.Show("Debe seleccionar un tutor y un estudiante para mostrar la información.");
                 return false;
@@ -83,6 +83,16 @@ namespace Prueba_Git
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button_Incribir_Click(object sender, EventArgs e)
         {
 
         }
