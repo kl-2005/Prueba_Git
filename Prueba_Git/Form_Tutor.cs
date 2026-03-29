@@ -25,9 +25,13 @@ namespace Prueba_Git
 
         private void button_RegistrarTutor_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos()) return;
-            if (!ValidarCedulaUnica()) return;
-            ValidarCedula10Digitos();
+            if (!ValidarCampos())
+                return;
+            if (!ValidarCedula10Digitos(textBox_CedulaTutor.Text))
+                return;
+
+            if (!ValidarCedulaUnica(textBox_CedulaTutor.Text))
+                return;
             AgregarEstudiante();
 
         }
@@ -80,9 +84,9 @@ namespace Prueba_Git
 
         }
 
-        private bool ValidarCedula10Digitos()
+        private bool ValidarCedula10Digitos(string cedula)
         {
-            if (!ValidarCampos())
+            if (cedula.Trim()=="")
             {
                 MessageBox.Show("La cédula no puede estar vacía", "corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
