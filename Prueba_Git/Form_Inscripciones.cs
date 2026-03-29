@@ -86,10 +86,7 @@ namespace Prueba_Git
         }
 
        
-        private void button_Agregar_Click(object sender, EventArgs e)
-        {
-            MostrarTutorEstudiante();
-        }
+      
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -109,6 +106,11 @@ namespace Prueba_Git
         private void button_Incribir_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_Inscribir_Click(object sender, EventArgs e)
+        {
+            MostrarTutorEstudiante();
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_Agregar = new System.Windows.Forms.Button();
+            this.button_Inscribir = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button_Agregar);
+            this.groupBox1.Controls.Add(this.button_Inscribir);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -66,16 +66,16 @@
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button_Agregar
+            // button_Inscribir
             // 
-            this.button_Agregar.Location = new System.Drawing.Point(506, 89);
-            this.button_Agregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_Agregar.Name = "button_Agregar";
-            this.button_Agregar.Size = new System.Drawing.Size(106, 34);
-            this.button_Agregar.TabIndex = 16;
-            this.button_Agregar.Text = "Inscribir";
-            this.button_Agregar.UseVisualStyleBackColor = true;
-            this.button_Agregar.Click += new System.EventHandler(this.button_Agregar_Click);
+            this.button_Inscribir.Location = new System.Drawing.Point(506, 89);
+            this.button_Inscribir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_Inscribir.Name = "button_Inscribir";
+            this.button_Inscribir.Size = new System.Drawing.Size(106, 34);
+            this.button_Inscribir.TabIndex = 16;
+            this.button_Inscribir.Text = "Inscribir";
+            this.button_Inscribir.UseVisualStyleBackColor = true;
+            this.button_Inscribir.Click += new System.EventHandler(this.button_Inscribir_Click);
             // 
             // comboBox3
             // 
@@ -197,6 +197,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button_Agregar;
+        private System.Windows.Forms.Button button_Inscribir;
     }
 }
