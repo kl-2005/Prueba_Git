@@ -13,7 +13,6 @@ namespace Prueba_Git
 {
     public partial class Form_Estudiante : Form
     {
-        DatosGlobales datosGlobales = new DatosGlobales();
         public Form_Estudiante()
         {
             InitializeComponent();
@@ -40,18 +39,15 @@ namespace Prueba_Git
             ValidarcedulaUnica();
         }
 
-        private void textBox_NombresEstudiantes_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private bool ValidarcedulaUnica(string cedula) 
         { 
-            foreach (var item in datosGlobales.Estudiantes)
+            foreach (var item in DatosGlobales.Estudiantes)
             { if (item.Cedula == cedula) 
                 { 
                     MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_CedulaEstudiantes.Clear(); 
+                    textBox_Nombre.Clear();
+                    textBox_Apellidos.Clear();
                     textBox_CedulaEstudiantes.Focus(); 
                     return false; 
                 }
