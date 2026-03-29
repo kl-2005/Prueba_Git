@@ -13,7 +13,6 @@ namespace Prueba_Git
     public partial class Form_Inscripciones : Form
     {
 
-        List<Inscripcion> listaInscripciones = new List<Inscripcion>();
         public Form_Inscripciones()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace Prueba_Git
             Tutor tutor = (Tutor)comboBox2.SelectedItem;
             Horario horario = (Horario)comboBox3.SelectedItem;
 
-            listaInscripciones.Add(new Inscripcion(
+            DatosGlobales.Inscripciones.Add(new Inscripcion(
                 estudiante.NombreCompleto,
                 tutor.Nombre,
                 horario.Dia + " " + horario.Hora

@@ -37,13 +37,13 @@
             this.dataGridView_Inscripciones = new System.Windows.Forms.DataGridView();
             this.button_Incribir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Inscripciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -56,7 +56,7 @@
             this.groupBox1.Controls.Add(this.dataGridView_Inscripciones);
             this.groupBox1.Controls.Add(this.button_Incribir);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.dataGridView);
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -143,15 +143,15 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "acciones";
             // 
-            // dataGridView
+            // dataGridView1
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(16, 220);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 62;
-            this.dataGridView.RowTemplate.Height = 28;
-            this.dataGridView.Size = new System.Drawing.Size(459, 232);
-            this.dataGridView.TabIndex = 7;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 220);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(459, 232);
+            this.dataGridView1.TabIndex = 7;
             // 
             // label3
             // 
@@ -191,7 +191,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Inscripciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,7 +202,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView_Inscripciones;
         private System.Windows.Forms.Button button_Incribir;
         private System.Windows.Forms.Label label4;
