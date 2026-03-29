@@ -100,7 +100,7 @@
             this.button_RegistrarTutor.Name = "button_RegistrarTutor";
             this.button_RegistrarTutor.Size = new System.Drawing.Size(101, 34);
             this.button_RegistrarTutor.TabIndex = 7;
-            this.button_RegistrarTutor.Text = "Registrar";
+            this.button_RegistrarTutor.Text = "REGISTRAR";
             this.button_RegistrarTutor.UseVisualStyleBackColor = true;
             this.button_RegistrarTutor.Click += new System.EventHandler(this.button_RegistrarTutor_Click);
             // 
