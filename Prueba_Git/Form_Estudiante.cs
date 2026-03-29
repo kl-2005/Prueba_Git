@@ -88,7 +88,37 @@ namespace Prueba_Git
             dataGridView_Estudiantes.DataSource = DatosGlobales.Estudiantes;
         }
 
+        private bool ValidarCedula10Digitos(string cedula) 
+        {
+            if (!ValidarCampos(cedula)) 
+            {
+                MessageBox.Show("La cédula no puede estar vacía", "corriga",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (cedula.Length!=10)
+            {
+
+                MessageBox.Show("Ponga 10 dígitos","corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false
+            }
+
+            foreach (char item in cedula)
+            {
+                if (!char.IsDigit(item))
+                {
+                    MessageBox.Show("la cedu debe ser solo numeros","corrige",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+
         private void dataGridView_Estudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox_ApellidosEstudiantes_TextChanged(object sender, EventArgs e)
         {
 
         }

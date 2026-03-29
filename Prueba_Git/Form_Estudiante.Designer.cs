@@ -101,6 +101,7 @@
             this.textBox_ApellidosEstudiantes.Name = "textBox_ApellidosEstudiantes";
             this.textBox_ApellidosEstudiantes.Size = new System.Drawing.Size(100, 26);
             this.textBox_ApellidosEstudiantes.TabIndex = 8;
+            this.textBox_ApellidosEstudiantes.TextChanged += new System.EventHandler(this.textBox_ApellidosEstudiantes_TextChanged);
             // 
             // label3
             // 
