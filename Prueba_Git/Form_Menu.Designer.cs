@@ -92,7 +92,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(230, 263);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 51);
+            this.button3.Size = new System.Drawing.Size(141, 70);
             this.button3.TabIndex = 9;
             this.button3.Text = "Registrar Horarios";
             this.button3.UseVisualStyleBackColor = true;

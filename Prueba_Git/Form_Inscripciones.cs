@@ -29,7 +29,8 @@ namespace Prueba_Git
 
         private void MostrarTutorEstudiante()
         {
-            if (!ValidarCampos()) return;
+            if (!ValidarCampos())
+            return;
             dataGridView1.DataSource = null;
             List<Inscripcion> listaInscripciones = new List<Inscripcion>();
             listaInscripciones.Add(new Inscripcion(comboBox1.SelectedItem.ToString(),comboBox2.SelectedItem.ToString(),comboBox3.SelectedItem.ToString()));
@@ -60,12 +61,24 @@ namespace Prueba_Git
             comboBox1.DisplayMember = "NombreCompleto";
         }
 
+        private void CargarHorarioComboBox() 
+        { 
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = DatosGlobales.Horarios;
+            comboBox3.DisplayMember = "Horario";
+        
+        }
         private void button_Agregar_Click(object sender, EventArgs e)
         {
             MostrarTutorEstudiante();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
