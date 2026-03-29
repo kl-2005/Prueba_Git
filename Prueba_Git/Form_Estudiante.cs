@@ -40,12 +40,12 @@ namespace Prueba_Git
             {
                 if (!ValidarCampos())
                     return;
-
                 if (!ValidarCedula10Digitos(textBox_CedulaEstudiantes.Text))
                     return;
-
                 if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
                     return;
+                if (!CoincidenciasCedulaEstudianteTutor(textBox_CedulaEstudiantes.Text)) 
+                return;
 
                 AgregarEstudiante();
             }
@@ -153,7 +153,7 @@ namespace Prueba_Git
 
                 if (cedula == "" || !ValidarCedula10Digitos(cedula))
                 {
-                    MessageBox.Show("Ingrese una cédula ", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese una cédula ", "Corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -190,6 +190,29 @@ namespace Prueba_Git
         private void groupBox_Estudiantes_Enter(object sender, EventArgs e)
         {
 
+        }
+
+
+        public bool CoincidenciasCedulaEstudianteTutor(string cedula)
+        {
+            try
+            {
+                    foreach (var tutor in DatosGlobales.Tutores)
+                    {
+                        if (cedula == tutor.Cedula)
+                        {
+                            MessageBox.Show("La cédula del estudiante coincide con la del tutor", "Corrija", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+                
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
     }
 }

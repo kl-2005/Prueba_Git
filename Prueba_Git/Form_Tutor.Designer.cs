@@ -66,7 +66,7 @@
             // 
             // button_Buscar
             // 
-            this.button_Buscar.Location = new System.Drawing.Point(458, 169);
+            this.button_Buscar.Location = new System.Drawing.Point(584, 169);
             this.button_Buscar.Name = "button_Buscar";
             this.button_Buscar.Size = new System.Drawing.Size(93, 34);
             this.button_Buscar.TabIndex = 14;
@@ -88,12 +88,12 @@
             this.dataGridView_Tutor.Name = "dataGridView_Tutor";
             this.dataGridView_Tutor.RowHeadersWidth = 62;
             this.dataGridView_Tutor.RowTemplate.Height = 28;
-            this.dataGridView_Tutor.Size = new System.Drawing.Size(507, 349);
+            this.dataGridView_Tutor.Size = new System.Drawing.Size(704, 349);
             this.dataGridView_Tutor.TabIndex = 8;
             // 
             // button_RegistrarTutor
             // 
-            this.button_RegistrarTutor.Location = new System.Drawing.Point(347, 169);
+            this.button_RegistrarTutor.Location = new System.Drawing.Point(473, 169);
             this.button_RegistrarTutor.Name = "button_RegistrarTutor";
             this.button_RegistrarTutor.Size = new System.Drawing.Size(101, 34);
             this.button_RegistrarTutor.TabIndex = 7;
@@ -112,7 +112,7 @@
             // 
             // textBox_NombreTutor
             // 
-            this.textBox_NombreTutor.Location = new System.Drawing.Point(304, 106);
+            this.textBox_NombreTutor.Location = new System.Drawing.Point(430, 106);
             this.textBox_NombreTutor.Name = "textBox_NombreTutor";
             this.textBox_NombreTutor.Size = new System.Drawing.Size(206, 26);
             this.textBox_NombreTutor.TabIndex = 4;
@@ -129,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(375, 62);
+            this.label3.Location = new System.Drawing.Point(501, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 2;

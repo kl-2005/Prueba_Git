@@ -37,7 +37,8 @@ namespace Prueba_Git
 
                 if (!ValidarCedulaUnica())
                     return;
-
+                if (!CoincidenciasCedulaEstudianteTutor(textBox_CedulaTutor.Text))
+                    return;
                 AgregarTutor();
             }
             catch (Exception ex)
@@ -179,6 +180,29 @@ namespace Prueba_Git
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+
+        public bool CoincidenciasCedulaEstudianteTutor(string cedula)
+        {
+            try
+            {
+                foreach (var est in DatosGlobales.Estudiantes)
+                {
+                    if (cedula == est.Cedula)
+                    {
+                        MessageBox.Show("La cédula del tutro coincide con la del est", "Corrija", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
     }
     
