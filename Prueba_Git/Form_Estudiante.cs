@@ -35,7 +35,14 @@ namespace Prueba_Git
 
         private void button_ResgistrarEstudiante_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+                return;
 
+            if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
+                return;
+
+            DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text,textBox_NombreEstudiantes.Text,textBox_ApellidosEstudiantes.Text));
+            MessageBox.Show("Estudiante registrado correctamente");
         }
         public bool ValidarCampos() 
         {

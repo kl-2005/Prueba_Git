@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 160);
+            this.label2.Location = new System.Drawing.Point(50, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 3;
@@ -97,7 +97,7 @@
             // 
             // textBox_ApellidosEstudiantes
             // 
-            this.textBox_ApellidosEstudiantes.Location = new System.Drawing.Point(40, 294);
+            this.textBox_ApellidosEstudiantes.Location = new System.Drawing.Point(39, 279);
             this.textBox_ApellidosEstudiantes.Name = "textBox_ApellidosEstudiantes";
             this.textBox_ApellidosEstudiantes.Size = new System.Drawing.Size(100, 26);
             this.textBox_ApellidosEstudiantes.TabIndex = 8;
@@ -105,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 262);
+            this.label3.Location = new System.Drawing.Point(54, 239);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 7;
@@ -113,7 +113,7 @@
             // 
             // textBox_NombreEstudiantes
             // 
-            this.textBox_NombreEstudiantes.Location = new System.Drawing.Point(40, 209);
+            this.textBox_NombreEstudiantes.Location = new System.Drawing.Point(39, 184);
             this.textBox_NombreEstudiantes.Name = "textBox_NombreEstudiantes";
             this.textBox_NombreEstudiantes.Size = new System.Drawing.Size(100, 26);
             this.textBox_NombreEstudiantes.TabIndex = 6;
