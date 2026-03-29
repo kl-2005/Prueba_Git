@@ -10,7 +10,8 @@ namespace Prueba_Git
     public static class DatosGlobales
     {
         
-        public static List<Estudiante> Estudiantes = new List<Estudiante>(){
+        public static List<Estudiante> Estudiantes = new List<Estudiante>()
+        {
         new Estudiante("0100000001","Juan","Pérez"),
         new Estudiante("0100000002","María","Gómez"),
         new Estudiante("0100000003","Carlos","López"),

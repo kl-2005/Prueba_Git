@@ -9,9 +9,15 @@ namespace Prueba_Git
 {
     public class Tutor
     {
+        
+        public string Cedula { get; set; }
+        public string Nombre { get; set; }
+        public String Apellido { get; set; }
+        public int Cupo_Maximo {get; set; }
+        public int Cupo_Disponible { get; set; }
         public Tutor()
         {
-            
+
         }
         public Tutor(string cedula, string nombre, string apellido, int cupo_Maximo, int cupo_Disponible)
         {
@@ -21,11 +27,5 @@ namespace Prueba_Git
             Cupo_Maximo = cupo_Maximo;
             Cupo_Disponible = cupo_Disponible;
         }
-
-        public string Cedula { get; set; }
-        public string Nombre { get; set; }
-        public String Apellido { get; set; }
-        public int Cupo_Maximo {get; set; }
-        public int Cupo_Disponible { get; set; }
     }
 }
