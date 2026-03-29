@@ -40,9 +40,9 @@ namespace Prueba_Git
 
                 AgregarTutor();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error:  " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error:  " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

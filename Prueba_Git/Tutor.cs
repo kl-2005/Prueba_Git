@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Prueba_Git
 {
-    public class String
+    public class Tutor
     {
-        public String()
+        public Tutor()
         {
             
         }
 
-        public String(string cedula, string nombre, int cupo_Maximo, int cupo_Disponible)
+        public Tutor(string cedula, string nombre, int cupo_Maximo, int cupo_Disponible)
         {
             Cedula = cedula;
             Nombre = nombre;
@@ -26,6 +26,5 @@ namespace Prueba_Git
         public string Nombre { get; set; }
         public int Cupo_Maximo {get; set; }
         public int Cupo_Disponible { get; set; }
-        public List<String> ListaEstudiantes { get; set; }
     }
 }
