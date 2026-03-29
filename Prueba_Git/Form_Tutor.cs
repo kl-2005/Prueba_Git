@@ -52,7 +52,7 @@ namespace Prueba_Git
         {
             try
             {
-                DatosGlobales.Tutores.Add(new Tutor(textBox_CedulaTutor.Text, textBox_NombreTutor.Text, Convert.ToInt32(numericUpDown_CapacidadMaxima.Value), Convert.ToInt32(numericUpDown_CapacidadMaxima.Value)));
+                DatosGlobales.Tutores.Add(new Tutor(textBox_CedulaTutor.Text, textBox_NombreTutor.Text,textBox_Apellido.Text, Convert.ToInt32(numericUpDown_CapacidadMaxima.Value), Convert.ToInt32(numericUpDown_CapacidadMaxima.Value)));
                 MessageBox.Show("Tutor registrado correctamente");
                 textBox_CedulaTutor.Text = "";
                 textBox_NombreTutor.Text = "";
@@ -77,7 +77,7 @@ namespace Prueba_Git
 
         public bool ValidarCampos()
         {
-            if (textBox_CedulaTutor.Text.Trim() == "" || textBox_NombreTutor.Text.Trim() == "" || numericUpDown_CapacidadMaxima.Value==0)
+            if (textBox_CedulaTutor.Text.Trim() == ""|| textBox_Apellido.Text.Trim() == "" || textBox_NombreTutor.Text.Trim() == "" || numericUpDown_CapacidadMaxima.Value==0)
             {
                 MessageBox.Show("Valide que todos los campos esten llenos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -93,6 +93,7 @@ namespace Prueba_Git
                     MessageBox.Show("Ya existe un tutor con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_CedulaTutor.Clear();
                     textBox_NombreTutor.Clear();
+                    textBox_Apellido.Clear();
                     numericUpDown_CapacidadMaxima.Value = 0;
                     textBox_CedulaTutor.Focus();
                     return false;
