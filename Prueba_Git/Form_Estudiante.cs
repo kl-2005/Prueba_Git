@@ -108,8 +108,11 @@ namespace Prueba_Git
                 if (!char.IsDigit(item))
                 {
                     MessageBox.Show("la cedu debe ser solo numeros","corrige",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    return false
+
                 }
             }
+            return true;
         }
 
 
