@@ -55,7 +55,7 @@ namespace Prueba_Git
 
         public bool ValidarCampos()
         {
-            if (textBox_CedulaTutor.Text.Trim() == "" || textBox_NombreTutor.Text.Trim() == "")
+            if (textBox_CedulaTutor.Text.Trim() == "" || textBox_NombreTutor.Text.Trim() == "" || numericUpDown_CapacidadMaxima.Value==0)
             {
                 MessageBox.Show("Valide que todos los campos esten llenos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
