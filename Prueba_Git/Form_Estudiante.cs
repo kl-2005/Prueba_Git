@@ -37,13 +37,15 @@ namespace Prueba_Git
         {
 
         }
-        public void ValidarCampos() 
+        public bool ValidarCampos() 
         {
             if (textBox_CedulaEstudiantes.Text.Trim()==""||textBox_NombreEstudiantes.Text.Trim()==""||textBox_ApellidosEstudiantes.Text.Trim()=="")
             {
-                MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Valide que todos los campos esten llenos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
-        
+            DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
+            return true;
         }
         private bool ValidarCedulaUnica(string cedula) 
         { 
