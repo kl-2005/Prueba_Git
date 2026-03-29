@@ -153,7 +153,7 @@ namespace Prueba_Git
 
                 if (cedula == "" || !ValidarCedula10Digitos(cedula))
                 {
-                    MessageBox.Show("Ingrese una cédula válida del Tutor a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese una cédula ", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -174,7 +174,7 @@ namespace Prueba_Git
 
                 if (!encontrado)
                 {
-                    MessageBox.Show("No se encontró ningún Tutor con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No se encontró a nadie con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBox_NombreEstudiantes.Clear();
                     textBox_CedulaEstudiantes.Clear();
                     textBox_ApellidosEstudiantes.Clear();
@@ -183,7 +183,7 @@ namespace Prueba_Git
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al buscar el tutor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
