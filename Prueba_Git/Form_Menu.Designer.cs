@@ -86,7 +86,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(230, 169);
+            this.button2.Location = new System.Drawing.Point(218, 169);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 57);
             this.button2.TabIndex = 7;
@@ -96,7 +96,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(230, 48);
+            this.button1.Location = new System.Drawing.Point(218, 48);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 52);
             this.button1.TabIndex = 4;
@@ -167,10 +167,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_Menu);
             this.Font = new System.Drawing.Font("Maiandra GD", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Principal";
-            this.Text = "Tutorias";
+            this.Text = "Sistema de Gestion de Tutorias";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox_Menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
