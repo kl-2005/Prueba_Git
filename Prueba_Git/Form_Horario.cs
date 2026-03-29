@@ -81,7 +81,7 @@ namespace Prueba_Git
                 {
                     if (item.Dia == Dia && item.Hora == hora)
                     {
-                        MessageBox.Show("Ya existe un horario registrado ", "Corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Ya existe un horario registrado ", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -91,7 +91,7 @@ namespace Prueba_Git
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al guardar hotario : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

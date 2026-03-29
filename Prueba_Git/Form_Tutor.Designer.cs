@@ -56,8 +56,8 @@
             this.groupBox1.BackColor = System.Drawing.Color.IndianRed;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.textBox_Buscar);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button_Buscar);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.numericUpDown_CapacidadMaxima);
             this.groupBox1.Controls.Add(this.button_RegistrarTutor);
             this.groupBox1.Controls.Add(this.label4);
@@ -70,7 +70,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(821, 318);
+            this.groupBox1.Size = new System.Drawing.Size(807, 287);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL TUTOR";
@@ -80,7 +80,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Prueba_Git.Properties.Resources.teacher;
-            this.pictureBox1.Location = new System.Drawing.Point(560, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(523, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 176);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             // 
             // textBox_Buscar
             // 
-            this.textBox_Buscar.Location = new System.Drawing.Point(290, 60);
+            this.textBox_Buscar.Location = new System.Drawing.Point(562, 219);
             this.textBox_Buscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_Buscar.Name = "textBox_Buscar";
             this.textBox_Buscar.Size = new System.Drawing.Size(213, 29);
@@ -100,17 +100,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(30, 63);
+            this.label5.Location = new System.Drawing.Point(464, 227);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 21);
+            this.label5.Size = new System.Drawing.Size(90, 21);
             this.label5.TabIndex = 15;
-            this.label5.Text = "FLITRAR";
+            this.label5.Text = "FILTRAR :";
             // 
             // button_Buscar
             // 
             this.button_Buscar.ForeColor = System.Drawing.Color.Black;
-            this.button_Buscar.Location = new System.Drawing.Point(461, 239);
+            this.button_Buscar.Location = new System.Drawing.Point(318, 214);
             this.button_Buscar.Name = "button_Buscar";
             this.button_Buscar.Size = new System.Drawing.Size(103, 36);
             this.button_Buscar.TabIndex = 14;
@@ -120,7 +120,7 @@
             // 
             // numericUpDown_CapacidadMaxima
             // 
-            this.numericUpDown_CapacidadMaxima.Location = new System.Drawing.Point(290, 231);
+            this.numericUpDown_CapacidadMaxima.Location = new System.Drawing.Point(239, 153);
             this.numericUpDown_CapacidadMaxima.Name = "numericUpDown_CapacidadMaxima";
             this.numericUpDown_CapacidadMaxima.Size = new System.Drawing.Size(133, 29);
             this.numericUpDown_CapacidadMaxima.TabIndex = 13;
@@ -128,7 +128,7 @@
             // button_RegistrarTutor
             // 
             this.button_RegistrarTutor.ForeColor = System.Drawing.Color.Black;
-            this.button_RegistrarTutor.Location = new System.Drawing.Point(570, 239);
+            this.button_RegistrarTutor.Location = new System.Drawing.Point(147, 214);
             this.button_RegistrarTutor.Name = "button_RegistrarTutor";
             this.button_RegistrarTutor.Size = new System.Drawing.Size(133, 36);
             this.button_RegistrarTutor.TabIndex = 7;
@@ -140,7 +140,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(30, 239);
+            this.label4.Location = new System.Drawing.Point(30, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 21);
             this.label4.TabIndex = 6;
@@ -148,7 +148,7 @@
             // 
             // textBox_NombreTutor
             // 
-            this.textBox_NombreTutor.Location = new System.Drawing.Point(290, 171);
+            this.textBox_NombreTutor.Location = new System.Drawing.Point(239, 96);
             this.textBox_NombreTutor.Name = "textBox_NombreTutor";
             this.textBox_NombreTutor.Size = new System.Drawing.Size(213, 29);
             this.textBox_NombreTutor.TabIndex = 4;
@@ -156,7 +156,7 @@
             // 
             // textBox_CedulaTutor
             // 
-            this.textBox_CedulaTutor.Location = new System.Drawing.Point(290, 117);
+            this.textBox_CedulaTutor.Location = new System.Drawing.Point(239, 42);
             this.textBox_CedulaTutor.Name = "textBox_CedulaTutor";
             this.textBox_CedulaTutor.Size = new System.Drawing.Size(213, 29);
             this.textBox_CedulaTutor.TabIndex = 3;
@@ -167,11 +167,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(30, 177);
+            this.label3.Location = new System.Drawing.Point(30, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 21);
+            this.label3.Size = new System.Drawing.Size(189, 21);
             this.label3.TabIndex = 2;
-            this.label3.Text = "NOMBRE";
+            this.label3.Text = "NOMBRE Y APELLIDO";
             // 
             // label2
             // 
@@ -179,16 +179,16 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(30, 117);
+            this.label2.Location = new System.Drawing.Point(30, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 21);
+            this.label2.Size = new System.Drawing.Size(78, 21);
             this.label2.TabIndex = 1;
-            this.label2.Text = "IDENTIFICACION/CEDULA";
+            this.label2.Text = "CEDULA";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(314, 117);
+            this.label1.Location = new System.Drawing.Point(263, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 21);
             this.label1.TabIndex = 0;
@@ -210,7 +210,7 @@
             this.groupBox2.Controls.Add(this.dataGridView_Tutor);
             this.groupBox2.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(13, 373);
+            this.groupBox2.Location = new System.Drawing.Point(13, 348);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(821, 383);
             this.groupBox2.TabIndex = 1;
@@ -222,7 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(863, 769);
+            this.ClientSize = new System.Drawing.Size(863, 742);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
