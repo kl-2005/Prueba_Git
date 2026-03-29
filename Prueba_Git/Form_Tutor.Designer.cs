@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(572, 652);
+            this.groupBox1.Size = new System.Drawing.Size(768, 652);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tutor";
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 694);
+            this.ClientSize = new System.Drawing.Size(838, 694);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Tutor";
             this.Text = "Form1";
