@@ -45,7 +45,7 @@
             this.dataGridView_Tutor = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Apellido = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).BeginInit();
@@ -56,7 +56,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.IndianRed;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox_Apellido);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.textBox_Buscar);
@@ -230,13 +230,13 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "APELLIDO";
             // 
-            // textBox1
+            // textBox_Apellido
             // 
-            this.textBox1.Location = new System.Drawing.Point(239, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 29);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_Apellido.Location = new System.Drawing.Point(239, 135);
+            this.textBox_Apellido.Name = "textBox_Apellido";
+            this.textBox_Apellido.Size = new System.Drawing.Size(213, 29);
+            this.textBox_Apellido.TabIndex = 19;
+            this.textBox_Apellido.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form_Tutor
             // 
@@ -278,7 +278,7 @@
         private System.Windows.Forms.TextBox textBox_Buscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Apellido;
         private System.Windows.Forms.Label label6;
     }
 }
