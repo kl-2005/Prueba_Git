@@ -72,7 +72,7 @@
             // 
             this.textBox_CedulaEstudiantes.Location = new System.Drawing.Point(147, 54);
             this.textBox_CedulaEstudiantes.Name = "textBox_CedulaEstudiantes";
-            this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(242, 29);
+            this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(206, 29);
             this.textBox_CedulaEstudiantes.TabIndex = 2;
             this.textBox_CedulaEstudiantes.TextChanged += new System.EventHandler(this.textBox_CedulaEstudiantes_TextChanged);
             // 
@@ -143,7 +143,7 @@
             // 
             this.textBox_ApellidosEstudiantes.Location = new System.Drawing.Point(147, 172);
             this.textBox_ApellidosEstudiantes.Name = "textBox_ApellidosEstudiantes";
-            this.textBox_ApellidosEstudiantes.Size = new System.Drawing.Size(242, 29);
+            this.textBox_ApellidosEstudiantes.Size = new System.Drawing.Size(206, 29);
             this.textBox_ApellidosEstudiantes.TabIndex = 8;
             this.textBox_ApellidosEstudiantes.TextChanged += new System.EventHandler(this.textBox_ApellidosEstudiantes_TextChanged);
             // 
@@ -160,7 +160,7 @@
             // 
             this.textBox_NombreEstudiantes.Location = new System.Drawing.Point(147, 114);
             this.textBox_NombreEstudiantes.Name = "textBox_NombreEstudiantes";
-            this.textBox_NombreEstudiantes.Size = new System.Drawing.Size(242, 29);
+            this.textBox_NombreEstudiantes.Size = new System.Drawing.Size(206, 29);
             this.textBox_NombreEstudiantes.TabIndex = 6;
             // 
             // dataGridView_Estudiantes
