@@ -109,7 +109,7 @@ namespace Prueba_Git
         private void button_Buscar_Click(object sender, EventArgs e)  /// cambiar de estudiante a tutor
         {
             
-            string cedula = textBox_CedulaEstudiantes.Text.Trim();
+            string cedula = textBox_CedulaTutor.Text.Trim();
 
             if (cedula.Trim() == "" && !ValidarCedula10Digitos(cedula))
             {
@@ -119,7 +119,7 @@ namespace Prueba_Git
             }
 
             bool encontrado = false;
-            foreach (var item in DatosGlobales.Estudiantes)
+            foreach (var item in DatosGlobales.Tutores)
             {
                 if (item.Cedula == cedula)
                 {
@@ -131,7 +131,6 @@ namespace Prueba_Git
 
                 }
             }
-
 
             if (!encontrado)
             {
