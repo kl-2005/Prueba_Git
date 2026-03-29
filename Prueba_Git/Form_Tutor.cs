@@ -32,11 +32,11 @@ namespace Prueba_Git
 
             if (!ValidarCedulaUnica(textBox_CedulaTutor.Text))
                 return;
-            AgregarEstudiante();
+            AgregarTutor();
 
         }
 
-        private void AgregarEstudiante()
+        private void AgregarTutor()
         {
             DatosGlobales.Tutores.Add(new Tutor(textBox_CedulaTutor.Text, textBox_NombreTutor.Text, Convert.ToInt32(numericUpDown_CapacidadMaxima.Value),Convert.ToInt32(numericUpDown_CapacidadMaxima.Value)));
             MessageBox.Show("Tutor registrado correctamente");
@@ -68,7 +68,7 @@ namespace Prueba_Git
             {
                 if (item.Cedula == textBox_CedulaTutor.Text)
                 {
-                    MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ya existe un tutor con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_CedulaTutor.Clear();
                     textBox_NombreTutor.Clear();
                     numericUpDown_CapacidadMaxima.Value = 0;
@@ -117,7 +117,7 @@ namespace Prueba_Git
 
             if (cedula.Trim() == "" && !ValidarCedula10Digitos())
             {
-                MessageBox.Show("InIngrese la cédula del estudiante a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("InIngrese la cédula del Tutor a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
 
             }
@@ -138,7 +138,7 @@ namespace Prueba_Git
 
             if (!encontrado)
             {
-                MessageBox.Show("No se encontró ningún estudiante con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se encontró ningún Tutor con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_NombreTutor.Clear();
                 textBox_CedulaTutor.Clear();
                 textBox_CedulaTutor.Focus();
