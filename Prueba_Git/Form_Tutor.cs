@@ -30,7 +30,7 @@ namespace Prueba_Git
             if (!ValidarCedula10Digitos(textBox_CedulaTutor.Text))
                 return;
 
-            if (!ValidarCedulaUnica(textBox_CedulaTutor.Text))
+            if (!ValidarCedulaUnica())
                 return;
             AgregarTutor();
 
@@ -115,7 +115,7 @@ namespace Prueba_Git
             
             string cedula = textBox_CedulaTutor.Text.Trim();
 
-            if (cedula.Trim() == "" && !ValidarCedula10Digitos())
+            if (cedula.Trim() == "" && !ValidarCedula10Digitos(textBox_CedulaTutor.Text))
             {
                 MessageBox.Show("InIngrese la cédula del Tutor a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
