@@ -61,13 +61,7 @@ namespace Prueba_Git
             comboBox1.DisplayMember = "NombreCompleto";
         }
 
-        private void CargarHorarioComboBox() 
-        { 
-            comboBox3.DataSource = null;
-            comboBox3.DataSource = DatosGlobales.Horarios;
-            comboBox3.DisplayMember = "Horario";
-        
-        }
+       
         private void button_Agregar_Click(object sender, EventArgs e)
         {
             MostrarTutorEstudiante();
