@@ -11,6 +11,7 @@ namespace Prueba_Git
         public string Cedula { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
+        public String NombreCompleto { get { return $"{Nombre} {Apellido}"; } }
 
         public Estudiante()
         {

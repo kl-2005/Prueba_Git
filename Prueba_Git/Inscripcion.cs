@@ -21,5 +21,10 @@ namespace Prueba_Git
             Tutor = tutor;
             Horario = horario;
         }
+        public Inscripcion(Estudiante estudiante, Tutor tutor)
+        {
+            Estudiante = estudiante;
+            Tutor = tutor;
+        }
     }
 }
