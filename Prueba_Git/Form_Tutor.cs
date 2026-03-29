@@ -63,7 +63,7 @@ namespace Prueba_Git
             catch(Exception e) 
             {
                 
-                    MessageBox.Show("Error : " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al agregar el tutor:: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
              }
@@ -110,13 +110,13 @@ namespace Prueba_Git
         {
             if (cedula.Trim()=="")
             {
-                MessageBox.Show("La cédula no puede estar vacía", "corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo de la cedula no puede estar vacio", "validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (textBox_CedulaTutor.Text.Length != 10)
             {
-                MessageBox.Show("Ponga 10 dígitos", "corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese 10 dígitos en la cedula", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -124,7 +124,7 @@ namespace Prueba_Git
             {
                 if (!char.IsDigit(item))
                 {
-                    MessageBox.Show("la cedu debe ser solo numeros", "corrige", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("la cedula debe tener solo numeros", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
 
                 }
@@ -191,7 +191,7 @@ namespace Prueba_Git
                 {
                     if (cedula == est.Cedula)
                     {
-                        MessageBox.Show("La cédula del tutro coincide con la del est", "Corrija", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("La cédula del tutor coincide con la del estudiante", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return false;
                     }
                 }

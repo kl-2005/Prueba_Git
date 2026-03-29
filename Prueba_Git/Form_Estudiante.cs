@@ -51,7 +51,7 @@ namespace Prueba_Git
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al registrar el estudiante: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -110,14 +110,14 @@ namespace Prueba_Git
         {
             if (cedula.Trim()=="") 
             {
-                MessageBox.Show("La cédula no puede estar vacía", "corriga",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo de la cedula no puede estar vacia", "Validacion",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (cedula.Length!=10)
             {
 
-                MessageBox.Show("Ponga 10 dígitos","corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La cedula debe tener 10 digitos","Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -125,7 +125,7 @@ namespace Prueba_Git
             {
                 if (!char.IsDigit(item))
                 {
-                    MessageBox.Show("la cedu debe ser solo numeros","corrige",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("la cedula debe tener solo numeros","Validacion",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return false;
 
                 }
@@ -159,7 +159,7 @@ namespace Prueba_Git
                     {
                         if (cedula == tutor.Cedula)
                         {
-                            MessageBox.Show("La cédula del estudiante coincide con la del tutor", "Corrija", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("La cédula del estudiante coincide con la del tutor", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return false;
                         }
                     }
@@ -198,6 +198,11 @@ namespace Prueba_Git
             {
                 MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
