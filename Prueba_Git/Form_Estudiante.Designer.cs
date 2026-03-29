@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Estudiante));
             this.button_ResgistrarEstudiante = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_CedulaEstudiantes = new System.Windows.Forms.TextBox();
@@ -194,6 +195,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_Estudiantes);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Estudiante";
             this.Text = "Registro de Estudiantes";
             this.Load += new System.EventHandler(this.Form_Estudiantes_Load);
