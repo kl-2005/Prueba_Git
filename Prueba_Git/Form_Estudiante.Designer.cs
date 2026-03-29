@@ -35,13 +35,15 @@
             this.groupBox_Estudiantes = new System.Windows.Forms.GroupBox();
             this.textBox_NombresEstudiantes = new System.Windows.Forms.TextBox();
             this.dataGridView_Estudiantes = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox_Apellidos = new System.Windows.Forms.TextBox();
             this.groupBox_Estudiantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Estudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // button_ResgistrarEstudiante
             // 
-            this.button_ResgistrarEstudiante.Location = new System.Drawing.Point(40, 278);
+            this.button_ResgistrarEstudiante.Location = new System.Drawing.Point(39, 347);
             this.button_ResgistrarEstudiante.Name = "button_ResgistrarEstudiante";
             this.button_ResgistrarEstudiante.Size = new System.Drawing.Size(98, 38);
             this.button_ResgistrarEstudiante.TabIndex = 0;
@@ -69,15 +71,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 149);
+            this.label2.Location = new System.Drawing.Point(45, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 20);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nombres y Apellidos";
+            this.label2.Text = "Nombres ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox_Estudiantes
             // 
+            this.groupBox_Estudiantes.Controls.Add(this.textBox_Apellidos);
+            this.groupBox_Estudiantes.Controls.Add(this.label3);
             this.groupBox_Estudiantes.Controls.Add(this.textBox_NombresEstudiantes);
             this.groupBox_Estudiantes.Controls.Add(this.dataGridView_Estudiantes);
             this.groupBox_Estudiantes.Controls.Add(this.button_ResgistrarEstudiante);
@@ -109,6 +113,22 @@
             this.dataGridView_Estudiantes.Size = new System.Drawing.Size(394, 335);
             this.dataGridView_Estudiantes.TabIndex = 5;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(54, 261);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Apellidos";
+            // 
+            // textBox_Apellidos
+            // 
+            this.textBox_Apellidos.Location = new System.Drawing.Point(40, 294);
+            this.textBox_Apellidos.Name = "textBox_Apellidos";
+            this.textBox_Apellidos.Size = new System.Drawing.Size(100, 26);
+            this.textBox_Apellidos.TabIndex = 8;
+            // 
             // Form_Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -134,5 +154,7 @@
         private System.Windows.Forms.GroupBox groupBox_Estudiantes;
         private System.Windows.Forms.DataGridView dataGridView_Estudiantes;
         private System.Windows.Forms.TextBox textBox_NombresEstudiantes;
+        private System.Windows.Forms.TextBox textBox_Apellidos;
+        private System.Windows.Forms.Label label3;
     }
 }
