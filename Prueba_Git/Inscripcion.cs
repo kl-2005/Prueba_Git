@@ -8,20 +8,20 @@ namespace Prueba_Git
 {
     public class Inscripcion
     {
-        public Estudiante Estudiante { get; set; }
-        public Tutor Tutor { get; set; }
+        public String Estudiante { get; set; }
+        public String Tutor { get; set; }
         public Horario Horario { get; set; }
         public Inscripcion()
         {
 
         }
-        public Inscripcion(Estudiante estudiante, Tutor tutor, Horario horario)
+        public Inscripcion(String estudiante, String tutor, Horario horario)
         {
             Estudiante = estudiante;
             Tutor = tutor;
             Horario = horario;
         }
-        public Inscripcion(Estudiante estudiante, Tutor tutor)
+        public Inscripcion(String estudiante, String tutor)
         {
             Estudiante = estudiante;
             Tutor = tutor;

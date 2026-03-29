@@ -49,7 +49,7 @@ namespace Prueba_Git
 
         private void AgregarEstudiante()
         {
-            DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
+            DatosGlobales.Estudiantes.Add(new String(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
             MessageBox.Show("Estudiante registrado correctamente");
             textBox_CedulaEstudiantes.Clear();
             textBox_NombreEstudiantes.Clear();

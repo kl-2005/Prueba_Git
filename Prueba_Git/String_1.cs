@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Prueba_Git
 {
-    public class Estudiante
+    public class String
     {
         public string Cedula { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public String NombreCompleto { get { return $"{Nombre} {Apellido}"; } }
+        public System.String NombreCompleto { get { return $"{Nombre} {Apellido}"; } }
 
-        public Estudiante()
+        public String()
         {
 
         }
 
-        public Estudiante(string cedula, string nombre, string apellido)
+        public String(string cedula, string nombre, string apellido)
         {
             Cedula = cedula;
             Nombre = nombre;

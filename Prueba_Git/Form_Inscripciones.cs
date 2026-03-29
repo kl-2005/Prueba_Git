@@ -21,14 +21,21 @@ namespace Prueba_Git
 
         private void MostrarTutorEstudiante()
         {
-            dataGridView1.DataSource = null;
             if (!ValidarCampos()) return;
-            List<Inscripcion> listaInscripciones = new List<Inscripcion>();
-            listaInscripciones.Add(new Inscripcion(combo, comboBox2);//me quede aqui, no se como agregar el estudiante y el tutor a la lista de inscripciones
-                                                                     //, ya que no se como se llaman las propiedades del estudiante y del tutor, ni como se
-                                                                     //relacionan con la clase inscripcion
-            dataGridView1.DataSource = listaInscripciones;
 
+            dataGridView1.DataSource = null;
+
+            List<Inscripcion> listaInscripciones = new List<Inscripcion>();
+
+            String estudiante = (String)comboBox1.SelectedItem;
+            String tutor = (String)comboBox2.SelectedItem;
+
+            listaInscripciones.Add(new Inscripcion(
+                estudiante.NombreCompleto,
+                tutor.Nombre
+            ));
+
+            dataGridView1.DataSource = listaInscripciones;
         }
 
         private bool ValidarCampos()

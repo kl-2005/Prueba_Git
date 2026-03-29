@@ -22,13 +22,13 @@ namespace Prueba_Git
 
         private void CargarDiasInscripcion()
         {
-            string[] diasTutorias = new String[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes" };
+            string[] diasTutorias = new System.String[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes" };
             comboBox_Dia.Items.AddRange(diasTutorias);
         }
 
         private void CargarHorasTutorias()
         {
-            string[] horasTutorias = new String[] { "8:00 - 9:00", "9:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00" };
+            string[] horasTutorias = new System.String[] { "8:00 - 9:00", "9:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00" };
             comboBox_Hora.Items.AddRange(horasTutorias);
         }
 
