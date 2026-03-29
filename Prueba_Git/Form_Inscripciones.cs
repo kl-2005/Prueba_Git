@@ -32,26 +32,44 @@ namespace Prueba_Git
         {
             if (!ValidarCampos()) return;
 
-            dataGridView1.DataSource = null;
-
             Estudiante estudiante = (Estudiante)comboBox1.SelectedItem;
             Tutor tutor = (Tutor)comboBox2.SelectedItem;
             Horario horario = (Horario)comboBox3.SelectedItem;
 
+            string horarioSeleccionado = horario.Dia + " " + horario.Hora;
+
+            bool yaInscrito = DatosGlobales.Inscripciones.Any(i => i.Estudiante == estudiante.NombreCompleto);
+
+            if (yaInscrito)
+            {
+                MessageBox.Show("Este estudiante ya está inscrito.");
+                return;
+            }
+
+            int inscritos = DatosGlobales.Inscripciones.Count(i => i.Tutor == tutor.Nombre);
+
+            if (inscritos >= tutor.Cupo_Disponible)
+            {
+                MessageBox.Show("El tutor ya no tiene cupos disponibles.");
+                return;
+            }
+
             DatosGlobales.Inscripciones.Add(new Inscripcion(
                 estudiante.NombreCompleto,
                 tutor.Nombre,
-                horario.Dia + " " + horario.Hora
+                horarioSeleccionado
             ));
+
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = DatosGlobales.Inscripciones;
 
-            var datos = from Tutor in DatosGlobales.Tutores
+            var datos = from t in DatosGlobales.Tutores
                         select new
                         {
-                            Tutor = tutor.Nombre,
-                            CuposTotales = tutor.Cupo_Disponible,
-                            CuposDisponibles = tutor.Cupo_Disponible -
-                                DatosGlobales.Inscripciones.Count(i => i.Tutor == tutor.Nombre)
+                            Tutor = t.Nombre,
+                            CuposTotales = t.Cupo_Disponible,
+                            CuposDisponibles = t.Cupo_Disponible -
+                                DatosGlobales.Inscripciones.Count(i => i.Tutor == t.Nombre)
                         };
 
             dataGridView_Inscripciones.DataSource = null;
