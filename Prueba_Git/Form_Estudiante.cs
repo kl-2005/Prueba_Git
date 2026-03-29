@@ -41,33 +41,40 @@ namespace Prueba_Git
             if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
                 return;
 
-            DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text,textBox_NombreEstudiantes.Text,textBox_ApellidosEstudiantes.Text));
+            DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
             MessageBox.Show("Estudiante registrado correctamente");
+            MostrarEstudiantes();
         }
-        public bool ValidarCampos() 
+        public bool ValidarCampos()
         {
-            if (textBox_CedulaEstudiantes.Text.Trim()==""||textBox_NombreEstudiantes.Text.Trim()==""||textBox_ApellidosEstudiantes.Text.Trim()=="")
+            if (textBox_CedulaEstudiantes.Text.Trim() == "" || textBox_NombreEstudiantes.Text.Trim() == "" || textBox_ApellidosEstudiantes.Text.Trim() == "")
             {
                 MessageBox.Show("Valide que todos los campos esten llenos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
         }
-        private bool ValidarCedulaUnica(string cedula) 
-        { 
+        private bool ValidarCedulaUnica(string cedula)
+        {
             foreach (var item in DatosGlobales.Estudiantes)
-            { if (item.Cedula == cedula) 
-                { 
+            {
+                if (item.Cedula == cedula)
+                {
                     MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    textBox_CedulaEstudiantes.Clear(); 
+                    textBox_CedulaEstudiantes.Clear();
                     textBox_NombreEstudiantes.Clear();
                     textBox_ApellidosEstudiantes.Clear();
-                    textBox_CedulaEstudiantes.Focus(); 
-                    return false; 
+                    textBox_CedulaEstudiantes.Focus();
+                    return false;
                 }
-            } 
+            }
             return true;
         }
 
+        public void MostrarEstudiantes()
+        {
+            dataGridView_Estudiantes.DataSource = null;
+            dataGridView_Estudiantes.DataSource = DatosGlobales.Estudiantes;
+        }
     }
 }
