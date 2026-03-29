@@ -8,9 +8,10 @@ namespace Prueba_Git
 {
     public class Horario
     {
-        public System.String Dia{ get; set; }
-        public System.String Hora{ get; set; }
-        public System.String Aula{ get; set; }
+        public String Dia{ get; set; }
+        public String Hora{ get; set; }
+        public String Aula{ get; set; }
+        public String HorarioCompleto{ get {return $"{Dia} {Hora} {Aula}";} }
 
         public Horario()
         {

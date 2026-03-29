@@ -17,6 +17,14 @@ namespace Prueba_Git
             InitializeComponent();
             CargarEstudiantesComboBox();
             CargarTutoresComboBox();
+            CargarHorariosComboBox();
+        }
+
+        private void CargarHorariosComboBox()
+        {
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = DatosGlobales.Horarios;
+            comboBox3.DisplayMember = "HorarioCompleto";
         }
 
         private void MostrarTutorEstudiante()
@@ -24,13 +32,13 @@ namespace Prueba_Git
             if (!ValidarCampos()) return;
             dataGridView1.DataSource = null;
             List<Inscripcion> listaInscripciones = new List<Inscripcion>();
-            listaInscripciones.Add(new Inscripcion(comboBox1.SelectedItem.ToString(),comboBox2.SelectedItem.ToString()));
+            listaInscripciones.Add(new Inscripcion(comboBox1.SelectedItem.ToString(),comboBox2.SelectedItem.ToString(),comboBox3.SelectedItem.ToString()));
             dataGridView1.DataSource = listaInscripciones;
         }
 
         private bool ValidarCampos()
         {
-            if (comboBox2.SelectedItem.ToString() == "" || comboBox1.SelectedItem.ToString() == "")
+            if (comboBox2.SelectedItem.ToString() == "" || comboBox1.SelectedItem.ToString() == "" || comboBox3.SelectedItem.ToString() == "")
             {
                 MessageBox.Show("Debe seleccionar un tutor y un estudiante para mostrar la información.");
                 return false;
