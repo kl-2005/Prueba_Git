@@ -46,7 +46,9 @@ namespace Prueba_Git
         private bool ValidarcedulaUnica(string cedula) 
         { 
             foreach (var item in datosGlobales.Estudiantes)
-            { if (item.Cedula == cedula) { MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            { if (item.Cedula == cedula) 
+                { 
+                    MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCedula.Clear(); 
                     txtCedula.Focus(); 
                     return false; 
