@@ -22,16 +22,9 @@ namespace Prueba_Git
         private void MostrarTutorEstudiante()
         {
             if (!ValidarCampos()) return;
-
             dataGridView1.DataSource = null;
-
             List<Inscripcion> listaInscripciones = new List<Inscripcion>();
-
-            String estudiante = (String)comboBox1.SelectedItem;
-            String tutor = (String)comboBox2.SelectedItem;
-
-            listaInscripciones.Add(new Inscripcion(estudiante.NombreCompleto,tutor.Nombre));
-
+            listaInscripciones.Add(new Inscripcion(comboBox1.SelectedItem.ToString(),comboBox2.SelectedItem.ToString()));
             dataGridView1.DataSource = listaInscripciones;
         }
 
