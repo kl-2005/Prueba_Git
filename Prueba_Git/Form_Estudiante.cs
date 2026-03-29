@@ -16,6 +16,7 @@ namespace Prueba_Git
         public Form_Estudiante()
         {
             InitializeComponent();
+            MostrarEstudiantes();
         }
 
         private void Form_Estudiantes_Load(object sender, EventArgs e)
@@ -41,10 +42,20 @@ namespace Prueba_Git
             if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
                 return;
 
+            AgregarEstudiante();
+        }
+
+        private void AgregarEstudiante()
+        {
             DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
             MessageBox.Show("Estudiante registrado correctamente");
+            textBox_CedulaEstudiantes.Text = "";
+            textBox_NombreEstudiantes.Text = "";
+            textBox_ApellidosEstudiantes.Text = "";
+            textBox_CedulaEstudiantes.Focus();
             MostrarEstudiantes();
         }
+
         public bool ValidarCampos()
         {
             if (textBox_CedulaEstudiantes.Text.Trim() == "" || textBox_NombreEstudiantes.Text.Trim() == "" || textBox_ApellidosEstudiantes.Text.Trim() == "")
