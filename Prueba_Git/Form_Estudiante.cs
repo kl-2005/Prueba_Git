@@ -38,6 +38,8 @@ namespace Prueba_Git
         {
             if (!ValidarCampos())
                 return;
+            if (!ValidarCedula10Digitos(textBox_CedulaEstudiantes.Text))
+                return;
 
             if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
                 return;
@@ -90,7 +92,7 @@ namespace Prueba_Git
 
         private bool ValidarCedula10Digitos(string cedula) 
         {
-            if (!ValidarCampos(cedula)) 
+            if (cedula.Trim()=="") 
             {
                 MessageBox.Show("La cédula no puede estar vacía", "corriga",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -100,7 +102,7 @@ namespace Prueba_Git
             {
 
                 MessageBox.Show("Ponga 10 dígitos","corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false
+                return false;
             }
 
             foreach (char item in cedula)
@@ -108,7 +110,7 @@ namespace Prueba_Git
                 if (!char.IsDigit(item))
                 {
                     MessageBox.Show("la cedu debe ser solo numeros","corrige",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                    return false
+                    return false;
 
                 }
             }
