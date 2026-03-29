@@ -140,6 +140,12 @@ namespace Prueba_Git
                 textBox_CedulaTutor.Focus();
             }
         }
+
+
+        private void textBox_NombreTutor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

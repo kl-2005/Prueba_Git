@@ -82,9 +82,9 @@
             // 
             // button_RegistrarTutor
             // 
-            this.button_RegistrarTutor.Location = new System.Drawing.Point(331, 158);
+            this.button_RegistrarTutor.Location = new System.Drawing.Point(347, 169);
             this.button_RegistrarTutor.Name = "button_RegistrarTutor";
-            this.button_RegistrarTutor.Size = new System.Drawing.Size(100, 45);
+            this.button_RegistrarTutor.Size = new System.Drawing.Size(101, 34);
             this.button_RegistrarTutor.TabIndex = 7;
             this.button_RegistrarTutor.Text = "Registrar";
             this.button_RegistrarTutor.UseVisualStyleBackColor = true;
@@ -105,6 +105,7 @@
             this.textBox_NombreTutor.Name = "textBox_NombreTutor";
             this.textBox_NombreTutor.Size = new System.Drawing.Size(206, 26);
             this.textBox_NombreTutor.TabIndex = 4;
+            this.textBox_NombreTutor.TextChanged += new System.EventHandler(this.textBox_NombreTutor_TextChanged);
             // 
             // textBox_CedulaTutor
             // 
