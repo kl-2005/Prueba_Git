@@ -90,7 +90,7 @@
             this.groupBox_Estudiantes.Controls.Add(this.textBox_CedulaEstudiantes);
             this.groupBox_Estudiantes.Location = new System.Drawing.Point(24, 28);
             this.groupBox_Estudiantes.Name = "groupBox_Estudiantes";
-            this.groupBox_Estudiantes.Size = new System.Drawing.Size(764, 411);
+            this.groupBox_Estudiantes.Size = new System.Drawing.Size(939, 603);
             this.groupBox_Estudiantes.TabIndex = 5;
             this.groupBox_Estudiantes.TabStop = false;
             this.groupBox_Estudiantes.Text = "Estudiantes";
@@ -121,18 +121,19 @@
             // dataGridView_Estudiantes
             // 
             this.dataGridView_Estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(303, 25);
+            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(277, 61);
             this.dataGridView_Estudiantes.Name = "dataGridView_Estudiantes";
             this.dataGridView_Estudiantes.RowHeadersWidth = 62;
             this.dataGridView_Estudiantes.RowTemplate.Height = 28;
-            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(394, 335);
+            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(615, 397);
             this.dataGridView_Estudiantes.TabIndex = 5;
+            this.dataGridView_Estudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Estudiantes_CellContentClick);
             // 
             // Form_Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.ClientSize = new System.Drawing.Size(983, 662);
             this.Controls.Add(this.groupBox_Estudiantes);
             this.Name = "Form_Estudiante";
             this.Text = "Form2";

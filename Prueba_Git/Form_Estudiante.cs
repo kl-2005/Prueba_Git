@@ -87,5 +87,10 @@ namespace Prueba_Git
             dataGridView_Estudiantes.DataSource = null;
             dataGridView_Estudiantes.DataSource = DatosGlobales.Estudiantes;
         }
+
+        private void dataGridView_Estudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
