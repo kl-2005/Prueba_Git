@@ -111,7 +111,7 @@ namespace Prueba_Git
             
             string cedula = textBox_CedulaTutor.Text.Trim();
 
-            if (cedula.Trim() == "" && !ValidarCedula10Digitos(cedula))
+            if (cedula.Trim() == "" && !ValidarCedula10Digitos())
             {
                 MessageBox.Show("InIngrese la cédula del estudiante a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -123,8 +123,8 @@ namespace Prueba_Git
             {
                 if (item.Cedula == cedula)
                 {
-                    textBox_NombreTutores.Text = item.Nombre;
-                    textBox_ApellidosTutores.Text = item.Apellido;
+                    textBox_NombreTutor.Text = item.Nombre;
+                    numericUpDown_CapacidadMaxima.Value = item.Cupo_Maximo;
 
                     encontrado = true;
                     break;
