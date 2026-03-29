@@ -147,36 +147,42 @@ namespace Prueba_Git
 
         private void button_Buscar_Click(object sender, EventArgs e)
         {
-            string cedula =textBox_CedulaEstudiantes.Text.Trim();
-
-            if (cedula.Trim() == "" && !ValidarCedula10Digitos(cedula))
+            try
             {
-                MessageBox.Show("InIngrese la cédula del estudiante a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                string cedula = textBox_CedulaTutor.Text.Trim();
 
-            }
-
-            bool encontrado = false;
-            foreach (var item in DatosGlobales.Estudiantes) 
-            {
-                if (item.Cedula==cedula) 
+                if (cedula == "" || !ValidarCedula10Digitos(cedula))
                 {
-                    textBox_NombreEstudiantes.Text = item.Nombre;
-                    textBox_ApellidosEstudiantes.Text = item.Apellido;
+                    MessageBox.Show("Ingrese una cédula válida del Tutor a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                    encontrado = true;
-                    break;
+                bool encontrado = false;
 
+                foreach (var item in DatosGlobales.Tutores)
+                {
+                    if (item.Cedula == cedula)
+                    {
+                        textBox_NombreTutor.Text = item.Nombre;
+                        numericUpDown_CapacidadMaxima.Value = item.Cupo_Maximo;
+
+                        encontrado = true;
+                        break;
+                    }
+                }
+
+                if (!encontrado)
+                {
+                    MessageBox.Show("No se encontró ningún Tutor con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox_NombreTutor.Clear();
+                    textBox_CedulaTutor.Clear();
+                    numericUpDown_CapacidadMaxima.Value = 0;
+                    textBox_CedulaTutor.Focus();
                 }
             }
-
-
-            if (!encontrado)
+            catch (Exception e)
             {
-                MessageBox.Show("No se encontró ningún estudiante con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_NombreEstudiantes.Clear();
-                textBox_ApellidosEstudiantes.Clear();
-                textBox_CedulaEstudiantes.Focus();
+                MessageBox.Show("Ocurrió un error al buscar el tutor: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
