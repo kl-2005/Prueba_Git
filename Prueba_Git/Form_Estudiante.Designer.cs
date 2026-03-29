@@ -190,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(857, 695);
+            this.ClientSize = new System.Drawing.Size(837, 695);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_Estudiantes);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
