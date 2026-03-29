@@ -37,16 +37,23 @@ namespace Prueba_Git
         {
 
         }
+        public void ValidarCampos() 
+        {
+            if (textBox_CedulaEstudiantes.Text.Trim()==""||textBox_NombreEstudiantes.Text.Trim()==""||textBox_ApellidosEstudiantes.Text.Trim()=="")
+            {
+                MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         
-        private bool ValidarcedulaUnica(string cedula) 
+        }
+        private bool ValidarCedulaUnica(string cedula) 
         { 
             foreach (var item in DatosGlobales.Estudiantes)
             { if (item.Cedula == cedula) 
                 { 
                     MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_CedulaEstudiantes.Clear(); 
-                    textBox_Nombre.Clear();
-                    textBox_Apellidos.Clear();
+                    textBox_NombreEstudiantes.Clear();
+                    textBox_ApellidosEstudiantes.Clear();
                     textBox_CedulaEstudiantes.Focus(); 
                     return false; 
                 }

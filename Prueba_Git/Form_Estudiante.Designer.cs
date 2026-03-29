@@ -33,9 +33,9 @@
             this.textBox_CedulaEstudiantes = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox_Estudiantes = new System.Windows.Forms.GroupBox();
-            this.textBox_Apellidos = new System.Windows.Forms.TextBox();
+            this.textBox_ApellidosEstudiantes = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_Nombre = new System.Windows.Forms.TextBox();
+            this.textBox_NombreEstudiantes = new System.Windows.Forms.TextBox();
             this.dataGridView_Estudiantes = new System.Windows.Forms.DataGridView();
             this.groupBox_Estudiantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Estudiantes)).BeginInit();
@@ -43,10 +43,9 @@
             // 
             // button_ResgistrarEstudiante
             // 
-            this.button_ResgistrarEstudiante.Location = new System.Drawing.Point(26, 226);
-            this.button_ResgistrarEstudiante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_ResgistrarEstudiante.Location = new System.Drawing.Point(39, 348);
             this.button_ResgistrarEstudiante.Name = "button_ResgistrarEstudiante";
-            this.button_ResgistrarEstudiante.Size = new System.Drawing.Size(65, 25);
+            this.button_ResgistrarEstudiante.Size = new System.Drawing.Size(98, 38);
             this.button_ResgistrarEstudiante.TabIndex = 0;
             this.button_ResgistrarEstudiante.Text = "Registrar";
             this.button_ResgistrarEstudiante.UseVisualStyleBackColor = true;
@@ -55,96 +54,86 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(54, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cedula";
             // 
             // textBox_CedulaEstudiantes
             // 
-            this.textBox_CedulaEstudiantes.Location = new System.Drawing.Point(26, 57);
-            this.textBox_CedulaEstudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_CedulaEstudiantes.Location = new System.Drawing.Point(39, 88);
             this.textBox_CedulaEstudiantes.Name = "textBox_CedulaEstudiantes";
-            this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(68, 20);
+            this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(100, 26);
             this.textBox_CedulaEstudiantes.TabIndex = 2;
             this.textBox_CedulaEstudiantes.TextChanged += new System.EventHandler(this.textBox_CedulaEstudiantes_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 104);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(45, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombres ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox_Estudiantes
             // 
-            this.groupBox_Estudiantes.Controls.Add(this.textBox_Apellidos);
+            this.groupBox_Estudiantes.Controls.Add(this.textBox_ApellidosEstudiantes);
             this.groupBox_Estudiantes.Controls.Add(this.label3);
-            this.groupBox_Estudiantes.Controls.Add(this.textBox_Nombre);
+            this.groupBox_Estudiantes.Controls.Add(this.textBox_NombreEstudiantes);
             this.groupBox_Estudiantes.Controls.Add(this.dataGridView_Estudiantes);
             this.groupBox_Estudiantes.Controls.Add(this.button_ResgistrarEstudiante);
             this.groupBox_Estudiantes.Controls.Add(this.label1);
             this.groupBox_Estudiantes.Controls.Add(this.label2);
             this.groupBox_Estudiantes.Controls.Add(this.textBox_CedulaEstudiantes);
-            this.groupBox_Estudiantes.Location = new System.Drawing.Point(16, 18);
-            this.groupBox_Estudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_Estudiantes.Location = new System.Drawing.Point(24, 28);
             this.groupBox_Estudiantes.Name = "groupBox_Estudiantes";
-            this.groupBox_Estudiantes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox_Estudiantes.Size = new System.Drawing.Size(509, 267);
+            this.groupBox_Estudiantes.Size = new System.Drawing.Size(764, 411);
             this.groupBox_Estudiantes.TabIndex = 5;
             this.groupBox_Estudiantes.TabStop = false;
             this.groupBox_Estudiantes.Text = "Estudiantes";
             // 
-            // textBox_Apellidos
+            // textBox_ApellidosEstudiantes
             // 
-            this.textBox_Apellidos.Location = new System.Drawing.Point(27, 191);
-            this.textBox_Apellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox_Apellidos.Name = "textBox_Apellidos";
-            this.textBox_Apellidos.Size = new System.Drawing.Size(68, 20);
-            this.textBox_Apellidos.TabIndex = 8;
+            this.textBox_ApellidosEstudiantes.Location = new System.Drawing.Point(40, 294);
+            this.textBox_ApellidosEstudiantes.Name = "textBox_ApellidosEstudiantes";
+            this.textBox_ApellidosEstudiantes.Size = new System.Drawing.Size(100, 26);
+            this.textBox_ApellidosEstudiantes.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 170);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(54, 262);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Apellidos";
             // 
-            // textBox_Nombre
+            // textBox_NombreEstudiantes
             // 
-            this.textBox_Nombre.Location = new System.Drawing.Point(27, 136);
-            this.textBox_Nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox_Nombre.Name = "textBox_Nombre";
-            this.textBox_Nombre.Size = new System.Drawing.Size(68, 20);
-            this.textBox_Nombre.TabIndex = 6;
+            this.textBox_NombreEstudiantes.Location = new System.Drawing.Point(40, 209);
+            this.textBox_NombreEstudiantes.Name = "textBox_NombreEstudiantes";
+            this.textBox_NombreEstudiantes.Size = new System.Drawing.Size(100, 26);
+            this.textBox_NombreEstudiantes.TabIndex = 6;
             // 
             // dataGridView_Estudiantes
             // 
             this.dataGridView_Estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(202, 16);
-            this.dataGridView_Estudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(303, 25);
             this.dataGridView_Estudiantes.Name = "dataGridView_Estudiantes";
             this.dataGridView_Estudiantes.RowHeadersWidth = 62;
             this.dataGridView_Estudiantes.RowTemplate.Height = 28;
-            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(263, 218);
+            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(394, 335);
             this.dataGridView_Estudiantes.TabIndex = 5;
             // 
             // Form_Estudiante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.groupBox_Estudiantes);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Estudiante";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form_Estudiantes_Load);
@@ -163,8 +152,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox_Estudiantes;
         private System.Windows.Forms.DataGridView dataGridView_Estudiantes;
-        private System.Windows.Forms.TextBox textBox_Nombre;
-        private System.Windows.Forms.TextBox textBox_Apellidos;
+        private System.Windows.Forms.TextBox textBox_NombreEstudiantes;
+        private System.Windows.Forms.TextBox textBox_ApellidosEstudiantes;
         private System.Windows.Forms.Label label3;
     }
 }
