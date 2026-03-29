@@ -91,7 +91,7 @@ namespace Prueba_Git
             if (textBox_CedulaTutor.Text.Length != 10)
             {
                 MessageBox.Show("Ponga 10 dígitos", "corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false
+                return false;
             }
 
             foreach (char item in textBox_CedulaTutor.Text)
@@ -99,7 +99,7 @@ namespace Prueba_Git
                 if (!char.IsDigit(item))
                 {
                     MessageBox.Show("la cedu debe ser solo numeros", "corrige", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false
+                    return false;
 
                 }
             }
