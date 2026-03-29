@@ -38,11 +38,7 @@ namespace Prueba_Git
             Tutor tutor = (Tutor)comboBox2.SelectedItem;
             Horario horario = (Horario)comboBox3.SelectedItem;
 
-            DatosGlobales.Inscripciones.Add(new Inscripcion(
-                estudiante.NombreCompleto,
-                tutor.Nombre,
-                horario.Dia + " " + horario.Hora
-            ));
+            DatosGlobales.Inscripciones.Add(new Inscripcion(estudiante.NombreCompleto,tutor.Nombre,horario.Dia + " " + horario.Hora));
             dataGridView1.DataSource = listaInscripciones;
         }
 
