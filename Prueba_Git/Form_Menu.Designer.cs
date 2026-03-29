@@ -48,6 +48,7 @@
             // 
             // groupBox_Menu
             // 
+            this.groupBox_Menu.BackColor = System.Drawing.Color.IndianRed;
             this.groupBox_Menu.Controls.Add(this.pictureBox5);
             this.groupBox_Menu.Controls.Add(this.button4);
             this.groupBox_Menu.Controls.Add(this.pictureBox4);
@@ -56,103 +57,104 @@
             this.groupBox_Menu.Controls.Add(this.button2);
             this.groupBox_Menu.Controls.Add(this.pictureBox2);
             this.groupBox_Menu.Controls.Add(this.button1);
-            this.groupBox_Menu.Location = new System.Drawing.Point(23, 53);
+            this.groupBox_Menu.Location = new System.Drawing.Point(22, 62);
             this.groupBox_Menu.Name = "groupBox_Menu";
-            this.groupBox_Menu.Size = new System.Drawing.Size(780, 270);
+            this.groupBox_Menu.Size = new System.Drawing.Size(796, 275);
             this.groupBox_Menu.TabIndex = 0;
             this.groupBox_Menu.TabStop = false;
             this.groupBox_Menu.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(40, 133);
+            this.pictureBox5.Location = new System.Drawing.Point(40, 147);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(140, 97);
+            this.pictureBox5.Size = new System.Drawing.Size(140, 92);
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(593, 162);
+            this.button4.Location = new System.Drawing.Point(590, 169);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 51);
+            this.button4.Size = new System.Drawing.Size(138, 57);
             this.button4.TabIndex = 11;
-            this.button4.Text = "Incripciones";
+            this.button4.Text = "GESTIONAR INSCRIPCIONES";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(412, 133);
+            this.pictureBox4.Location = new System.Drawing.Point(412, 146);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(140, 98);
+            this.pictureBox4.Size = new System.Drawing.Size(140, 93);
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(590, 50);
+            this.button3.Location = new System.Drawing.Point(590, 48);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 70);
+            this.button3.Size = new System.Drawing.Size(141, 52);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Registrar Horarios";
+            this.button3.Text = "REGISTRAR HORARIOS";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(412, 25);
+            this.pictureBox3.Location = new System.Drawing.Point(412, 19);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(140, 97);
+            this.pictureBox3.Size = new System.Drawing.Size(140, 92);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(230, 157);
+            this.button2.Location = new System.Drawing.Point(230, 169);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 60);
+            this.button2.Size = new System.Drawing.Size(141, 57);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Registrar Tutor";
+            this.button2.Text = "REGISTRAR TUTOR";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(40, 25);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 24);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(140, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(140, 87);
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(230, 50);
+            this.button1.Location = new System.Drawing.Point(230, 48);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 55);
+            this.button1.Size = new System.Drawing.Size(141, 52);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Resgistrar Estudiante";
+            this.button1.Text = "REGISTRAR ESTUDIANTE";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(339, 22);
+            this.label1.Font = new System.Drawing.Font("Maiandra GD", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(368, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 28);
+            this.label1.Size = new System.Drawing.Size(99, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tutorias";
+            this.label1.Text = "MENU";
             // 
             // Form_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(839, 340);
+            this.BackColor = System.Drawing.Color.MistyRose;
+            this.ClientSize = new System.Drawing.Size(839, 356);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_Menu);
+            this.Font = new System.Drawing.Font("Maiandra GD", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Principal";
