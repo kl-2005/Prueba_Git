@@ -106,7 +106,7 @@ namespace Prueba_Git
             return true;
         }
 
-        private void button_Buscar_Click(object sender, EventArgs e)  /// cambiar de estudiante a tutor
+        private void button_Buscar_Click(object sender, EventArgs e)  
         {
             
             string cedula = textBox_CedulaTutor.Text.Trim();
@@ -123,8 +123,8 @@ namespace Prueba_Git
             {
                 if (item.Cedula == cedula)
                 {
-                    textBox_NombreEstudiantes.Text = item.Nombre;
-                    textBox_ApellidosEstudiantes.Text = item.Apellido;
+                    textBox_NombreTutores.Text = item.Nombre;
+                    textBox_ApellidosTutores.Text = item.Apellido;
 
                     encontrado = true;
                     break;
