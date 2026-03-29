@@ -103,7 +103,7 @@
             this.groupBox_Estudiantes.ForeColor = System.Drawing.Color.White;
             this.groupBox_Estudiantes.Location = new System.Drawing.Point(27, 30);
             this.groupBox_Estudiantes.Name = "groupBox_Estudiantes";
-            this.groupBox_Estudiantes.Size = new System.Drawing.Size(739, 311);
+            this.groupBox_Estudiantes.Size = new System.Drawing.Size(707, 311);
             this.groupBox_Estudiantes.TabIndex = 5;
             this.groupBox_Estudiantes.TabStop = false;
             this.groupBox_Estudiantes.Text = "DATOS DEL ESTUDIANTES";
@@ -122,17 +122,17 @@
             // 
             // textBox_Buscar
             // 
-            this.textBox_Buscar.Location = new System.Drawing.Point(494, 247);
+            this.textBox_Buscar.Location = new System.Drawing.Point(481, 247);
             this.textBox_Buscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.textBox_Buscar.Name = "textBox_Buscar";
-            this.textBox_Buscar.Size = new System.Drawing.Size(213, 29);
+            this.textBox_Buscar.Size = new System.Drawing.Size(203, 29);
             this.textBox_Buscar.TabIndex = 11;
             this.textBox_Buscar.TextChanged += new System.EventHandler(this.textBox_Buscar_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(385, 250);
+            this.label4.Location = new System.Drawing.Point(383, 250);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 21);
@@ -166,11 +166,11 @@
             // dataGridView_Estudiantes
             // 
             this.dataGridView_Estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(14, 43);
+            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(32, 45);
             this.dataGridView_Estudiantes.Name = "dataGridView_Estudiantes";
             this.dataGridView_Estudiantes.RowHeadersWidth = 62;
             this.dataGridView_Estudiantes.RowTemplate.Height = 28;
-            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(601, 223);
+            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(643, 223);
             this.dataGridView_Estudiantes.TabIndex = 5;
             this.dataGridView_Estudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Estudiantes_CellContentClick);
             // 
@@ -181,7 +181,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(27, 376);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(658, 294);
+            this.groupBox1.Size = new System.Drawing.Size(707, 294);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "LISTA DE ESTUDIANTES REGISTRADOS";
