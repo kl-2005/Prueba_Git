@@ -12,6 +12,8 @@ namespace Prueba_Git
 {
     public partial class Form_Inscripciones : Form
     {
+
+        List<Inscripcion> listaInscripciones = new List<Inscripcion>();
         public Form_Inscripciones()
         {
             InitializeComponent();
@@ -29,11 +31,19 @@ namespace Prueba_Git
 
         private void MostrarTutorEstudiante()
         {
-            if (!ValidarCampos())
-            return;
+            if (!ValidarCampos()) return;
+
             dataGridView1.DataSource = null;
-            List<Inscripcion> listaInscripciones = new List<Inscripcion>();
-            listaInscripciones.Add(new Inscripcion(comboBox1.SelectedItem.ToString(),comboBox2.SelectedItem.ToString(),comboBox3.SelectedItem.ToString()));
+
+            Estudiante estudiante = (Estudiante)comboBox1.SelectedItem;
+            Tutor tutor = (Tutor)comboBox2.SelectedItem;
+            Horario horario = (Horario)comboBox3.SelectedItem;
+
+            listaInscripciones.Add(new Inscripcion(
+                estudiante.NombreCompleto,
+                tutor.Nombre,
+                horario.Dia + " " + horario.Hora
+            ));
             dataGridView1.DataSource = listaInscripciones;
         }
 

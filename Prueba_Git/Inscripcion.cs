@@ -21,10 +21,5 @@ namespace Prueba_Git
             Tutor = tutor;
             Horario = horario;
         }
-        public Inscripcion(String estudiante, String tutor)
-        {
-            Estudiante = estudiante;
-            Tutor = tutor;
-        }
     }
 }
