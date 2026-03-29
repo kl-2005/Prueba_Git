@@ -35,8 +35,7 @@ namespace Prueba_Git
 
         private void button_ResgistrarEstudiante_Click(object sender, EventArgs e)
         {
-            ValidarCamposEstudiantes();
-            ValidarcedulaUnica();
+
         }
 
         private bool ValidarcedulaUnica(string cedula) 
