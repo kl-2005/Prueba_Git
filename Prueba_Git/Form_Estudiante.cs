@@ -57,7 +57,8 @@ namespace Prueba_Git
                     textBox_CedulaEstudiantes.Focus(); 
                     return false; 
                 }
-            } return true;
+            } 
+            return true;
         }
 
     }
