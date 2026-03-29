@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 543);
+            this.ClientSize = new System.Drawing.Size(720, 738);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_Menu);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

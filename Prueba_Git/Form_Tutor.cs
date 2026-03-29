@@ -204,6 +204,16 @@ namespace Prueba_Git
                 return false;
             }
         }
+
+        private void dataGridView_Tutor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form_Tutor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
