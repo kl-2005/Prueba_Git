@@ -113,7 +113,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Prueba_Git.Properties.Resources.read;
-            this.pictureBox1.Location = new System.Drawing.Point(447, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(415, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(247, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,7 +126,7 @@
             this.textBox_Buscar.Location = new System.Drawing.Point(481, 247);
             this.textBox_Buscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.textBox_Buscar.Name = "textBox_Buscar";
-            this.textBox_Buscar.Size = new System.Drawing.Size(203, 29);
+            this.textBox_Buscar.Size = new System.Drawing.Size(194, 29);
             this.textBox_Buscar.TabIndex = 11;
             this.textBox_Buscar.TextChanged += new System.EventHandler(this.textBox_Buscar_TextChanged);
             // 
