@@ -58,16 +58,24 @@ namespace Prueba_Git
             dataGridView_Inscripciones.DataSource = datos.ToList();
         }
 
-
-
-
         private bool ValidarCampos()
         {
-            if (comboBox2.SelectedItem.ToString() == "" || comboBox1.SelectedItem.ToString() =="" || comboBox3.SelectedItem.ToString() =="")
+            if (comboBox1.SelectedItem == null ||
+                comboBox2.SelectedItem == null ||
+                comboBox3.SelectedItem == null)
             {
-                MessageBox.Show("Debe seleccionar un tutor y un estudiante para mostrar la información.");
+                MessageBox.Show("Debe seleccionar todos los campos.");
                 return false;
             }
+
+            if (comboBox1.Text.Trim() == "" ||
+                comboBox2.Text.Trim() == "" ||
+                comboBox3.Text.Trim() == "")
+            {
+                MessageBox.Show("Los campos no pueden estar vacíos.");
+                return false;
+            }
+
             return true;
         }
 
