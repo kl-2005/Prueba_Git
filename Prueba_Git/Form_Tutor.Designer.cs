@@ -70,7 +70,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(897, 318);
+            this.groupBox1.Size = new System.Drawing.Size(821, 318);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL TUTOR";
@@ -80,7 +80,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Prueba_Git.Properties.Resources.teacher;
-            this.pictureBox1.Location = new System.Drawing.Point(656, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(560, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 176);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -92,7 +92,7 @@
             this.textBox_Buscar.Location = new System.Drawing.Point(290, 60);
             this.textBox_Buscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_Buscar.Name = "textBox_Buscar";
-            this.textBox_Buscar.Size = new System.Drawing.Size(287, 29);
+            this.textBox_Buscar.Size = new System.Drawing.Size(213, 29);
             this.textBox_Buscar.TabIndex = 16;
             this.textBox_Buscar.TextChanged += new System.EventHandler(this.textBox_Buscar_TextChanged);
             // 
@@ -110,7 +110,7 @@
             // button_Buscar
             // 
             this.button_Buscar.ForeColor = System.Drawing.Color.Black;
-            this.button_Buscar.Location = new System.Drawing.Point(512, 239);
+            this.button_Buscar.Location = new System.Drawing.Point(461, 239);
             this.button_Buscar.Name = "button_Buscar";
             this.button_Buscar.Size = new System.Drawing.Size(103, 36);
             this.button_Buscar.TabIndex = 14;
@@ -128,7 +128,7 @@
             // button_RegistrarTutor
             // 
             this.button_RegistrarTutor.ForeColor = System.Drawing.Color.Black;
-            this.button_RegistrarTutor.Location = new System.Drawing.Point(668, 231);
+            this.button_RegistrarTutor.Location = new System.Drawing.Point(570, 239);
             this.button_RegistrarTutor.Name = "button_RegistrarTutor";
             this.button_RegistrarTutor.Size = new System.Drawing.Size(133, 36);
             this.button_RegistrarTutor.TabIndex = 7;
@@ -150,15 +150,15 @@
             // 
             this.textBox_NombreTutor.Location = new System.Drawing.Point(290, 171);
             this.textBox_NombreTutor.Name = "textBox_NombreTutor";
-            this.textBox_NombreTutor.Size = new System.Drawing.Size(287, 29);
+            this.textBox_NombreTutor.Size = new System.Drawing.Size(213, 29);
             this.textBox_NombreTutor.TabIndex = 4;
             this.textBox_NombreTutor.TextChanged += new System.EventHandler(this.textBox_NombreTutor_TextChanged);
             // 
             // textBox_CedulaTutor
             // 
-            this.textBox_CedulaTutor.Location = new System.Drawing.Point(290, 113);
+            this.textBox_CedulaTutor.Location = new System.Drawing.Point(290, 117);
             this.textBox_CedulaTutor.Name = "textBox_CedulaTutor";
-            this.textBox_CedulaTutor.Size = new System.Drawing.Size(287, 29);
+            this.textBox_CedulaTutor.Size = new System.Drawing.Size(213, 29);
             this.textBox_CedulaTutor.TabIndex = 3;
             this.textBox_CedulaTutor.TextChanged += new System.EventHandler(this.textBox_CedulaTutor_TextChanged);
             // 
@@ -200,7 +200,7 @@
             this.dataGridView_Tutor.Name = "dataGridView_Tutor";
             this.dataGridView_Tutor.RowHeadersWidth = 62;
             this.dataGridView_Tutor.RowTemplate.Height = 28;
-            this.dataGridView_Tutor.Size = new System.Drawing.Size(857, 309);
+            this.dataGridView_Tutor.Size = new System.Drawing.Size(764, 309);
             this.dataGridView_Tutor.TabIndex = 8;
             this.dataGridView_Tutor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Tutor_CellContentClick);
             // 
@@ -212,7 +212,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(13, 373);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(897, 383);
+            this.groupBox2.Size = new System.Drawing.Size(821, 383);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTA DE TUTORES REGISTRADOS";
@@ -222,7 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(928, 769);
+            this.ClientSize = new System.Drawing.Size(863, 769);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
