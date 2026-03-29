@@ -49,8 +49,8 @@ namespace Prueba_Git
             { if (item.Cedula == cedula) 
                 { 
                     MessageBox.Show("Ya existe un estudiante con esa cédula", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtCedula.Clear(); 
-                    txtCedula.Focus(); 
+                    textBox_CedulaEstudiantes.Clear(); 
+                    textBox_CedulaEstudiantes.Focus(); 
                     return false; 
                 }
             } return true;
