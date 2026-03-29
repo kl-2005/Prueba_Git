@@ -13,6 +13,7 @@ namespace Prueba_Git
 {
     public partial class Form_Estudiante : Form
     {
+        DatosGlobales datosGlobales = new DatosGlobales();
         public Form_Estudiante()
         {
             InitializeComponent();
