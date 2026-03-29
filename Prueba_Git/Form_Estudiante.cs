@@ -145,33 +145,6 @@ namespace Prueba_Git
 
         }
 
-        private void button_Buscar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string filtro = textBox_Buscar.Text.Trim().ToLower();
-                List<Estudiante> listaFiltrada = new List<Estudiante>();
-
-                foreach (var estudiante in DatosGlobales.Estudiantes)
-                {
-                    string cedula = estudiante.Cedula.ToLower();
-                    string nombre = estudiante.Nombre.ToLower();
-
-                    if (cedula.Contains(filtro) || nombre.Contains(filtro))
-                    {
-                        listaFiltrada.Add(estudiante);
-                    }
-                }
-
-                dataGridView_Estudiantes.DataSource = null;
-                dataGridView_Estudiantes.DataSource = listaFiltrada;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void groupBox_Estudiantes_Enter(object sender, EventArgs e)
         {
 
@@ -197,6 +170,33 @@ namespace Prueba_Git
             {
                 MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+        }
+
+        private void textBox_Buscar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string filtro = textBox_Buscar.Text.Trim().ToLower();
+                List<Estudiante> listaFiltrada = new List<Estudiante>();
+
+                foreach (var estudiante in DatosGlobales.Estudiantes)
+                {
+                    string cedula = estudiante.Cedula.ToLower();
+                    string nombre = estudiante.Nombre.ToLower();
+
+                    if (cedula.Contains(filtro) || nombre.Contains(filtro))
+                    {
+                        listaFiltrada.Add(estudiante);
+                    }
+                }
+
+                dataGridView_Estudiantes.DataSource = null;
+                dataGridView_Estudiantes.DataSource = listaFiltrada;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

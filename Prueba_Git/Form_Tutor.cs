@@ -214,6 +214,33 @@ namespace Prueba_Git
         {
 
         }
+
+        private void textBox_Buscar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string filtro = textBox_Buscar.Text.Trim().ToLower();
+                List<Tutor> listaFiltrada = new List<Tutor>();
+
+                foreach (var tutor in DatosGlobales.Tutores)
+                {
+                    string cedula = tutor.Cedula.ToLower();
+                    string nombre = tutor.Nombre.ToLower();
+
+                    if (cedula.Contains(filtro) || nombre.Contains(filtro))
+                    {
+                        listaFiltrada.Add(tutor);
+                    }
+                }
+
+                dataGridView_Tutor.DataSource = null;
+                dataGridView_Tutor.DataSource = listaFiltrada;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
     
 }
