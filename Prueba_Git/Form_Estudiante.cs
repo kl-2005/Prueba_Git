@@ -36,26 +36,42 @@ namespace Prueba_Git
 
         private void button_ResgistrarEstudiante_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
-                return;
-            if (!ValidarCedula10Digitos(textBox_CedulaEstudiantes.Text))
-                return;
+            try
+            {
+                if (!ValidarCampos())
+                    return;
 
-            if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
-                return;
+                if (!ValidarCedula10Digitos(textBox_CedulaEstudiantes.Text))
+                    return;
 
-            AgregarEstudiante();
+                if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
+                    return;
+
+                AgregarEstudiante();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ocurrió un error : " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AgregarEstudiante()
         {
-            DatosGlobales.Estudiantes.Add(new String(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
-            MessageBox.Show("Estudiante registrado correctamente");
-            textBox_CedulaEstudiantes.Clear();
-            textBox_NombreEstudiantes.Clear();
-            textBox_ApellidosEstudiantes.Clear();
-            textBox_CedulaEstudiantes.Focus();
-            MostrarEstudiantes();
+            try
+            {
+                DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
+                MessageBox.Show("Estudiante registrado correctamente");
+                textBox_CedulaEstudiantes.Clear();
+                textBox_NombreEstudiantes.Clear();
+                textBox_ApellidosEstudiantes.Clear();
+                textBox_CedulaEstudiantes.Focus();
+                MostrarEstudiantes();
+            }
+            catch (Exception e) 
+            {
+                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         public bool ValidarCampos()
