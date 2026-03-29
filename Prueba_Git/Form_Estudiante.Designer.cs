@@ -38,15 +38,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_NombreEstudiantes = new System.Windows.Forms.TextBox();
             this.dataGridView_Estudiantes = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_Buscar = new System.Windows.Forms.TextBox();
             this.groupBox_Estudiantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Estudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // button_ResgistrarEstudiante
             // 
-            this.button_ResgistrarEstudiante.Location = new System.Drawing.Point(39, 348);
+            this.button_ResgistrarEstudiante.Location = new System.Drawing.Point(26, 226);
+            this.button_ResgistrarEstudiante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ResgistrarEstudiante.Name = "button_ResgistrarEstudiante";
-            this.button_ResgistrarEstudiante.Size = new System.Drawing.Size(98, 38);
+            this.button_ResgistrarEstudiante.Size = new System.Drawing.Size(65, 25);
             this.button_ResgistrarEstudiante.TabIndex = 0;
             this.button_ResgistrarEstudiante.Text = "Registrar";
             this.button_ResgistrarEstudiante.UseVisualStyleBackColor = true;
@@ -55,32 +58,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 38);
+            this.label1.Location = new System.Drawing.Point(36, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cedula";
             // 
             // textBox_CedulaEstudiantes
             // 
-            this.textBox_CedulaEstudiantes.Location = new System.Drawing.Point(39, 88);
+            this.textBox_CedulaEstudiantes.Location = new System.Drawing.Point(26, 57);
+            this.textBox_CedulaEstudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_CedulaEstudiantes.Name = "textBox_CedulaEstudiantes";
-            this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(100, 26);
+            this.textBox_CedulaEstudiantes.Size = new System.Drawing.Size(68, 20);
             this.textBox_CedulaEstudiantes.TabIndex = 2;
             this.textBox_CedulaEstudiantes.TextChanged += new System.EventHandler(this.textBox_CedulaEstudiantes_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 142);
+            this.label2.Location = new System.Drawing.Point(33, 92);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombres ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox_Estudiantes
             // 
+            this.groupBox_Estudiantes.Controls.Add(this.textBox_Buscar);
+            this.groupBox_Estudiantes.Controls.Add(this.label4);
             this.groupBox_Estudiantes.Controls.Add(this.button_Buscar);
             this.groupBox_Estudiantes.Controls.Add(this.textBox_ApellidosEstudiantes);
             this.groupBox_Estudiantes.Controls.Add(this.label3);
@@ -90,9 +98,11 @@
             this.groupBox_Estudiantes.Controls.Add(this.label1);
             this.groupBox_Estudiantes.Controls.Add(this.label2);
             this.groupBox_Estudiantes.Controls.Add(this.textBox_CedulaEstudiantes);
-            this.groupBox_Estudiantes.Location = new System.Drawing.Point(24, 28);
+            this.groupBox_Estudiantes.Location = new System.Drawing.Point(16, 18);
+            this.groupBox_Estudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_Estudiantes.Name = "groupBox_Estudiantes";
-            this.groupBox_Estudiantes.Size = new System.Drawing.Size(939, 603);
+            this.groupBox_Estudiantes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_Estudiantes.Size = new System.Drawing.Size(626, 392);
             this.groupBox_Estudiantes.TabIndex = 5;
             this.groupBox_Estudiantes.TabStop = false;
             this.groupBox_Estudiantes.Text = "Estudiantes";
@@ -100,9 +110,10 @@
             // 
             // button_Buscar
             // 
-            this.button_Buscar.Location = new System.Drawing.Point(161, 352);
+            this.button_Buscar.Location = new System.Drawing.Point(122, 227);
+            this.button_Buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Buscar.Name = "button_Buscar";
-            this.button_Buscar.Size = new System.Drawing.Size(97, 34);
+            this.button_Buscar.Size = new System.Drawing.Size(65, 22);
             this.button_Buscar.TabIndex = 9;
             this.button_Buscar.Text = "Buscar";
             this.button_Buscar.UseVisualStyleBackColor = true;
@@ -110,45 +121,66 @@
             // 
             // textBox_ApellidosEstudiantes
             // 
-            this.textBox_ApellidosEstudiantes.Location = new System.Drawing.Point(39, 279);
+            this.textBox_ApellidosEstudiantes.Location = new System.Drawing.Point(26, 181);
+            this.textBox_ApellidosEstudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ApellidosEstudiantes.Name = "textBox_ApellidosEstudiantes";
-            this.textBox_ApellidosEstudiantes.Size = new System.Drawing.Size(100, 26);
+            this.textBox_ApellidosEstudiantes.Size = new System.Drawing.Size(68, 20);
             this.textBox_ApellidosEstudiantes.TabIndex = 8;
             this.textBox_ApellidosEstudiantes.TextChanged += new System.EventHandler(this.textBox_ApellidosEstudiantes_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 239);
+            this.label3.Location = new System.Drawing.Point(36, 155);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Apellidos";
             // 
             // textBox_NombreEstudiantes
             // 
-            this.textBox_NombreEstudiantes.Location = new System.Drawing.Point(39, 184);
+            this.textBox_NombreEstudiantes.Location = new System.Drawing.Point(26, 120);
+            this.textBox_NombreEstudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_NombreEstudiantes.Name = "textBox_NombreEstudiantes";
-            this.textBox_NombreEstudiantes.Size = new System.Drawing.Size(100, 26);
+            this.textBox_NombreEstudiantes.Size = new System.Drawing.Size(68, 20);
             this.textBox_NombreEstudiantes.TabIndex = 6;
             // 
             // dataGridView_Estudiantes
             // 
             this.dataGridView_Estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(277, 61);
+            this.dataGridView_Estudiantes.Location = new System.Drawing.Point(212, 17);
+            this.dataGridView_Estudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_Estudiantes.Name = "dataGridView_Estudiantes";
             this.dataGridView_Estudiantes.RowHeadersWidth = 62;
             this.dataGridView_Estudiantes.RowTemplate.Height = 28;
-            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(615, 397);
+            this.dataGridView_Estudiantes.Size = new System.Drawing.Size(410, 258);
             this.dataGridView_Estudiantes.TabIndex = 5;
             this.dataGridView_Estudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Estudiantes_CellContentClick);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(123, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Filtrar:";
+            // 
+            // textBox_Buscar
+            // 
+            this.textBox_Buscar.Location = new System.Drawing.Point(122, 57);
+            this.textBox_Buscar.Name = "textBox_Buscar";
+            this.textBox_Buscar.Size = new System.Drawing.Size(72, 20);
+            this.textBox_Buscar.TabIndex = 11;
+            // 
             // Form_Estudiante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 662);
+            this.ClientSize = new System.Drawing.Size(655, 430);
             this.Controls.Add(this.groupBox_Estudiantes);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Estudiante";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form_Estudiantes_Load);
@@ -171,5 +203,7 @@
         private System.Windows.Forms.TextBox textBox_ApellidosEstudiantes;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_Buscar;
+        private System.Windows.Forms.TextBox textBox_Buscar;
+        private System.Windows.Forms.Label label4;
     }
 }

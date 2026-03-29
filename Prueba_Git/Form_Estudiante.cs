@@ -149,41 +149,26 @@ namespace Prueba_Git
         {
             try
             {
-                string cedula = textBox_CedulaEstudiantes.Text.Trim();
+                string filtro = textBox_Buscar.Text.Trim().ToLower();
+                List<Estudiante> listaFiltrada = new List<Estudiante>();
 
-                if (cedula == "" || !ValidarCedula10Digitos(cedula))
+                foreach (var estudiante in DatosGlobales.Estudiantes)
                 {
-                    MessageBox.Show("Ingrese una cédula ", "Corriga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    string cedula = estudiante.Cedula.ToLower();
+                    string nombre = estudiante.Nombre.ToLower();
 
-                bool encontrado = false;
-
-                foreach (var item in DatosGlobales.Estudiantes)
-                {
-                    if (item.Cedula == cedula)
+                    if (cedula.Contains(filtro) || nombre.Contains(filtro))
                     {
-                        textBox_NombreEstudiantes.Text = item.Nombre;
-                        textBox_ApellidosEstudiantes.Text = item.Apellido;
-                        textBox_CedulaEstudiantes.Text = item.Cedula;
-
-                        encontrado = true;
-                        break;
+                        listaFiltrada.Add(estudiante);
                     }
                 }
 
-                if (!encontrado)
-                {
-                    MessageBox.Show("No se encontró a nadie con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox_NombreEstudiantes.Clear();
-                    textBox_CedulaEstudiantes.Clear();
-                    textBox_ApellidosEstudiantes.Clear();
-                    textBox_CedulaEstudiantes.Focus();
-                }
+                dataGridView_Estudiantes.DataSource = null;
+                dataGridView_Estudiantes.DataSource = listaFiltrada;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
