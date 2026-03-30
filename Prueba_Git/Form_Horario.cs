@@ -125,5 +125,10 @@ namespace Prueba_Git
         {
 
         }
+
+        private void Form_Horario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
