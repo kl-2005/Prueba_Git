@@ -33,7 +33,16 @@ namespace Prueba_Git
 
             string horarioSeleccionado = horario.Dia + " " + horario.Hora;
 
-            bool yaInscrito = DatosSistema.Inscripciones.Any(i => i.Estudiante == estudiante.NombreCompleto);
+            bool yaInscrito = false;
+
+            foreach (var inscripcion in DatosSistema.Inscripciones)
+            {
+                if (inscripcion.Estudiante == estudiante.NombreCompleto)
+                {
+                    yaInscrito = true;
+                    break; 
+                }
+            }
 
             if (yaInscrito)
             {
