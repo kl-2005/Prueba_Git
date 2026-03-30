@@ -62,18 +62,31 @@ namespace Prueba_Git
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = DatosSistema.Inscripciones;
+            List<object> lista = new List<object>();
 
-            var datos = from t in DatosSistema.Tutores
-                        select new
-                        {
-                            Tutor = t.Nombre,
-                            CuposTotales = t.Cupo_Maximo,
-                            CuposDisponibles = t.Cupo_Maximo -
-                                DatosSistema.Inscripciones.Count(i => i.Tutor == t.Nombre)
-                        };
+            foreach (var t in DatosSistema.Tutores)
+            {
+                int cuposOcupados = 0;
+                foreach (var i in DatosSistema.Inscripciones)
+                {
+                    if (i.Tutor == t.Nombre)
+                    {
+                        cuposOcupados++;
+                    }
+                }
+
+                int cuposDisponibles = t.Cupo_Maximo - cuposOcupados;
+
+                lista.Add(new
+                {
+                    Tutor = t.Nombre,
+                    CuposTotales = t.Cupo_Maximo,
+                    CuposDisponibles = cuposDisponibles
+                });
+            }
 
             dataGridView_Inscripciones.DataSource = null;
-            dataGridView_Inscripciones.DataSource = datos.ToList();
+            dataGridView_Inscripciones.DataSource = lista;
         }
 
         private bool ValidarCampos()
