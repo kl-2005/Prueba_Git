@@ -13,6 +13,7 @@ namespace Prueba_Git
         public string Cedula { get; set; }
         public string Nombre { get; set; }
         public String Apellido { get; set; }
+        public string NombresCompletosT { get { return $"{Nombre} {Apellido}"; } }
         public int Cupo_Maximo {get; set; }
         public int Cupo_Disponible { get; set; }
 

@@ -65,6 +65,7 @@ namespace Prueba_Git
                     return;
 
                 GuardarHorario();
+                MessageBox.Show("Horario registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

@@ -22,13 +22,7 @@ namespace Prueba_Git
             CargarTablas();
         }
 
-        private void CargarHorariosComboBox()
-        {
-            comboBox3.DataSource = null;
-            comboBox3.DataSource = DatosSistema.Horarios;
-            comboBox3.DisplayMember = "HorarioCompleto";
-        }
-
+       
         private void RegistrarInscripcion()
         {
             if (!ValidarCampos()) return;
@@ -39,8 +33,7 @@ namespace Prueba_Git
 
             string horarioSeleccionado = horario.Dia + " " + horario.Hora;
 
-            bool yaInscrito = DatosSistema.Inscripciones
-                .Any(i => i.Estudiante == estudiante.NombreCompleto);
+            bool yaInscrito = DatosSistema.Inscripciones.Any(i => i.Estudiante == estudiante.NombreCompleto);
 
             if (yaInscrito)
             {
@@ -85,17 +78,13 @@ namespace Prueba_Git
 
         private bool ValidarCampos()
         {
-            if (comboBox1.SelectedItem == null ||
-                comboBox2.SelectedItem == null ||
-                comboBox3.SelectedItem == null)
+            if (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null ||comboBox3.SelectedItem == null)
             {
                 MessageBox.Show("Debe seleccionar todos los campos.");
                 return false;
             }
 
-            if (comboBox1.Text.Trim() == "" ||
-                comboBox2.Text.Trim() == "" ||
-                comboBox3.Text.Trim() == "")
+            if (comboBox1.Text.Trim() == "" || comboBox2.Text.Trim() == "" ||comboBox3.Text.Trim() == "")
             {
                 MessageBox.Show("Los campos no pueden estar vacíos.");
                 return false;
@@ -104,11 +93,20 @@ namespace Prueba_Git
             return true;
         }
 
+        private void CargarHorariosComboBox()
+        {
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = DatosSistema.Horarios;
+            comboBox3.DisplayMember = "HorarioCompleto";
+        }
+
+
+
         private void CargarTutoresComboBox()
         {
             comboBox2.DataSource = null;
             comboBox2.DataSource = DatosSistema.Tutores;
-            comboBox2.DisplayMember = "Nombre";
+            comboBox2.DisplayMember = "NombresCompletosT";
         }
 
         private void CargarEstudiantesComboBox()
@@ -152,6 +150,11 @@ namespace Prueba_Git
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form_Inscripciones_Load(object sender, EventArgs e)
         {
 
         }

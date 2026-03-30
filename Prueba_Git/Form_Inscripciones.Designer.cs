@@ -232,6 +232,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Inscripciones";
             this.Text = "Gestion de Inscripciones";
+            this.Load += new System.EventHandler(this.Form_Inscripciones_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
