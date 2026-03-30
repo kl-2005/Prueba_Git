@@ -45,7 +45,7 @@ namespace Prueba_Git
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al registrar un tutor :  " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al registrar un tutor :  " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -64,7 +64,7 @@ namespace Prueba_Git
             }
             catch(Exception e) 
             {
-                    MessageBox.Show("Error al agregar el tutor: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al agregar el tutor: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

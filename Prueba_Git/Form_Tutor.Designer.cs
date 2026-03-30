@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Tutor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_Apellido = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox_Buscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_Tutor = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox_Apellido = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CapacidadMaxima)).BeginInit();
@@ -78,20 +78,37 @@
             this.groupBox1.Text = "DATOS DEL TUTOR";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // textBox_Apellido
+            // 
+            this.textBox_Apellido.Location = new System.Drawing.Point(239, 135);
+            this.textBox_Apellido.Name = "textBox_Apellido";
+            this.textBox_Apellido.Size = new System.Drawing.Size(213, 29);
+            this.textBox_Apellido.TabIndex = 19;
+            this.textBox_Apellido.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 143);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 21);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "APELLIDO";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Prueba_Git.Properties.Resources.teacher;
-            this.pictureBox1.Location = new System.Drawing.Point(534, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(524, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 176);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 206);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
             // textBox_Buscar
             // 
-            this.textBox_Buscar.Location = new System.Drawing.Point(562, 219);
+            this.textBox_Buscar.Location = new System.Drawing.Point(550, 242);
             this.textBox_Buscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_Buscar.Name = "textBox_Buscar";
             this.textBox_Buscar.Size = new System.Drawing.Size(213, 29);
@@ -102,7 +119,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(464, 227);
+            this.label5.Location = new System.Drawing.Point(452, 250);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 21);
@@ -207,23 +224,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTA DE TUTORES REGISTRADOS";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 143);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 21);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "APELLIDO";
-            // 
-            // textBox_Apellido
-            // 
-            this.textBox_Apellido.Location = new System.Drawing.Point(239, 135);
-            this.textBox_Apellido.Name = "textBox_Apellido";
-            this.textBox_Apellido.Size = new System.Drawing.Size(213, 29);
-            this.textBox_Apellido.TabIndex = 19;
-            this.textBox_Apellido.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form_Tutor
             // 

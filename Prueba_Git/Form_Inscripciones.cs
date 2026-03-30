@@ -37,7 +37,7 @@ namespace Prueba_Git
 
             if (yaInscrito)
             {
-                MessageBox.Show("Este estudiante ya está inscrito.");
+                MessageBox.Show("Este estudiante ya está inscrito.","Validacion",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
@@ -45,7 +45,7 @@ namespace Prueba_Git
 
             if (inscritos >= tutor.Cupo_Disponible)
             {
-                MessageBox.Show("El tutor ya no tiene cupos disponibles.");
+                MessageBox.Show("El tutor ya no tiene cupos disponibles.", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -93,13 +93,13 @@ namespace Prueba_Git
         {
             if (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null ||comboBox3.SelectedItem == null)
             {
-                MessageBox.Show("Debe seleccionar todos los campos.");
+                MessageBox.Show("Debe seleccionar todos los campos.", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (comboBox1.Text.Trim() == "" || comboBox2.Text.Trim() == "" ||comboBox3.Text.Trim() == "")
             {
-                MessageBox.Show("Los campos no pueden estar vacíos.");
+                MessageBox.Show("Los campos no pueden estar vacíos.", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -168,6 +168,11 @@ namespace Prueba_Git
         }
 
         private void Form_Inscripciones_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
