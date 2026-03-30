@@ -25,8 +25,6 @@ namespace Prueba_Git
 
         private void button_RegistrarTutor_Click(object sender, EventArgs e)
         {
-          
-
             try
             {
                 if (!ValidarCampos())
@@ -37,13 +35,17 @@ namespace Prueba_Git
 
                 if (!ValidarCedulaUnica())
                     return;
-                if (!CoincidenciasCedulaEstudianteTutor(textBox_CedulaTutor.Text))
+                
+                if (!DatosSistema.CoincidenciaCedula(textBox_CedulaTutor.Text))
+                {
+                    MessageBox.Show("La cédula ya existe en el sistema", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
+                }
                 AgregarTutor();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error:  " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al registrar un tutor :  " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -52,8 +54,8 @@ namespace Prueba_Git
         {
             try
             {
-                DatosGlobales.Tutores.Add(new Tutor(textBox_CedulaTutor.Text, textBox_NombreTutor.Text,textBox_Apellido.Text, Convert.ToInt32(numericUpDown_CapacidadMaxima.Value), Convert.ToInt32(numericUpDown_CapacidadMaxima.Value)));
-                MessageBox.Show("Tutor registrado correctamente");
+                DatosSistema.Tutores.Add(new Tutor(textBox_CedulaTutor.Text, textBox_NombreTutor.Text,textBox_Apellido.Text, Convert.ToInt32(numericUpDown_CapacidadMaxima.Value), Convert.ToInt32(numericUpDown_CapacidadMaxima.Value)));
+                MessageBox.Show("Tutor registrado correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 textBox_CedulaTutor.Text = "";
                 textBox_NombreTutor.Text = "";
                 numericUpDown_CapacidadMaxima.Value = 0;
@@ -62,17 +64,14 @@ namespace Prueba_Git
             }
             catch(Exception e) 
             {
-                
                     MessageBox.Show("Error al agregar el tutor: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-             }
+            }
         }
 
         private void MostrarTutor()
         {
             dataGridView_Tutor.DataSource = null;
-            dataGridView_Tutor.DataSource = DatosGlobales.Tutores;
+            dataGridView_Tutor.DataSource = DatosSistema.Tutores;
         }
 
         public bool ValidarCampos()
@@ -86,7 +85,7 @@ namespace Prueba_Git
         }
         private bool ValidarCedulaUnica()
         {
-            foreach (var item in DatosGlobales.Tutores)
+            foreach (var item in DatosSistema.Tutores)
             {
                 if (item.Cedula == textBox_CedulaTutor.Text)
                 {
@@ -125,7 +124,7 @@ namespace Prueba_Git
             {
                 if (!char.IsDigit(item))
                 {
-                    MessageBox.Show("la cedula debe tener solo numeros", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("La cedula debe tener solo numeros", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
 
                 }
@@ -133,44 +132,7 @@ namespace Prueba_Git
             return true;
         }
 
-        private void button_Buscar_Click(object sender, EventArgs e)  
-        {
-
-            try
-            {
-                string cedula = textBox_CedulaTutor.Text.Trim();
-
-                if (cedula == "" && !ValidarCedula10Digitos(cedula))
-                {
-                    MessageBox.Show("Ingrese la cédula del Tutor a buscar", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                bool encontrado = false;
-                foreach (var item in DatosGlobales.Tutores)
-                {
-                    if (item.Cedula == cedula)
-                    {
-                        textBox_NombreTutor.Text = item.Nombre;
-                        numericUpDown_CapacidadMaxima.Value = item.Cupo_Maximo;
-                        encontrado = true;
-                        break;
-                    }
-                }
-
-                if (!encontrado)
-                {
-                    MessageBox.Show("No se encontró ningún Tutor con esa cédula", "Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox_NombreTutor.Clear();
-                    textBox_CedulaTutor.Clear();
-                    textBox_CedulaTutor.Focus();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
 
         private void textBox_NombreTutor_TextChanged(object sender, EventArgs e)
@@ -183,28 +145,6 @@ namespace Prueba_Git
 
         }
 
-
-        public bool CoincidenciasCedulaEstudianteTutor(string cedula)
-        {
-            try
-            {
-                foreach (var est in DatosGlobales.Estudiantes)
-                {
-                    if (cedula == est.Cedula)
-                    {
-                        MessageBox.Show("La cédula del tutor coincide con la del estudiante", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return false;
-                    }
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió un error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-        }
 
         private void dataGridView_Tutor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -220,15 +160,15 @@ namespace Prueba_Git
         {
             try
             {
-                string filtro = textBox_Buscar.Text.Trim().ToLower();
+                string buscar = textBox_Buscar.Text.Trim().ToLower();
                 List<Tutor> listaFiltrada = new List<Tutor>();
 
-                foreach (var tutor in DatosGlobales.Tutores)
+                foreach (var tutor in DatosSistema.Tutores)
                 {
                     string cedula = tutor.Cedula.ToLower();
                     string nombre = tutor.Nombre.ToLower();
 
-                    if (cedula.Contains(filtro) || nombre.Contains(filtro))
+                    if (cedula.Contains(buscar) || nombre.Contains(buscar))
                     {
                         listaFiltrada.Add(tutor);
                     }
@@ -239,7 +179,7 @@ namespace Prueba_Git
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al filtrar el tutor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

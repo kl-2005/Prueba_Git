@@ -33,7 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox_Buscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button_Buscar = new System.Windows.Forms.Button();
             this.numericUpDown_CapacidadMaxima = new System.Windows.Forms.NumericUpDown();
             this.button_RegistrarTutor = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.textBox_Buscar);
-            this.groupBox1.Controls.Add(this.button_Buscar);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.numericUpDown_CapacidadMaxima);
             this.groupBox1.Controls.Add(this.button_RegistrarTutor);
@@ -110,17 +108,6 @@
             this.label5.Size = new System.Drawing.Size(90, 21);
             this.label5.TabIndex = 15;
             this.label5.Text = "FILTRAR :";
-            // 
-            // button_Buscar
-            // 
-            this.button_Buscar.ForeColor = System.Drawing.Color.Black;
-            this.button_Buscar.Location = new System.Drawing.Point(314, 237);
-            this.button_Buscar.Name = "button_Buscar";
-            this.button_Buscar.Size = new System.Drawing.Size(103, 36);
-            this.button_Buscar.TabIndex = 14;
-            this.button_Buscar.Text = "Buscar";
-            this.button_Buscar.UseVisualStyleBackColor = true;
-            this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click);
             // 
             // numericUpDown_CapacidadMaxima
             // 
@@ -273,7 +260,6 @@
         private System.Windows.Forms.DataGridView dataGridView_Tutor;
         private System.Windows.Forms.Button button_RegistrarTutor;
         private System.Windows.Forms.NumericUpDown numericUpDown_CapacidadMaxima;
-        private System.Windows.Forms.Button button_Buscar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox_Buscar;
         private System.Windows.Forms.Label label5;

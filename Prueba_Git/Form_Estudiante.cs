@@ -34,6 +34,30 @@ namespace Prueba_Git
 
         }
 
+       
+        private void dataGridView_Estudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox_ApellidosEstudiantes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox_Estudiantes_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+    
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void button_ResgistrarEstudiante_Click(object sender, EventArgs e)
         {
             try
@@ -44,14 +68,17 @@ namespace Prueba_Git
                     return;
                 if (!ValidarCedulaUnica(textBox_CedulaEstudiantes.Text))
                     return;
-                if (!DatosGlobales.CoincidenciasCedulaEstudianteTutor(textBox_CedulaEstudiantes.Text)) 
-                return;
+                if (!DatosSistema.CoincidenciaCedula(textBox_CedulaEstudiantes.Text))
+                {
+                    MessageBox.Show("La cédula ya existe en el sistema", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 AgregarEstudiante();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al registrar el estudiante: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al registrar el estudiante: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -59,17 +86,17 @@ namespace Prueba_Git
         {
             try
             {
-                DatosGlobales.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
-                MessageBox.Show("Estudiante registrado correctamente");
+                DatosSistema.Estudiantes.Add(new Estudiante(textBox_CedulaEstudiantes.Text, textBox_NombreEstudiantes.Text, textBox_ApellidosEstudiantes.Text));
+                MessageBox.Show("Estudiante registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_CedulaEstudiantes.Clear();
                 textBox_NombreEstudiantes.Clear();
                 textBox_ApellidosEstudiantes.Clear();
                 textBox_CedulaEstudiantes.Focus();
                 MostrarEstudiantes();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al registrar al estudiante : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
@@ -85,7 +112,7 @@ namespace Prueba_Git
         }
         private bool ValidarCedulaUnica(string cedula)
         {
-            foreach (var item in DatosGlobales.Estudiantes)
+            foreach (var item in DatosSistema.Estudiantes)
             {
                 if (item.Cedula == cedula)
                 {
@@ -103,21 +130,21 @@ namespace Prueba_Git
         public void MostrarEstudiantes()
         {
             dataGridView_Estudiantes.DataSource = null;
-            dataGridView_Estudiantes.DataSource = DatosGlobales.Estudiantes;
+            dataGridView_Estudiantes.DataSource = DatosSistema.Estudiantes;
         }
 
-        private bool ValidarCedula10Digitos(string cedula) 
+        private bool ValidarCedula10Digitos(string cedula)
         {
-            if (cedula.Trim()=="") 
+            if (cedula.Trim() == "")
             {
-                MessageBox.Show("El campo de la cedula no puede estar vacia", "Validacion",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo de la cedula no puede estar vacia", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (cedula.Length!=10)
+            if (cedula.Length != 10)
             {
 
-                MessageBox.Show("La cedula debe tener 10 digitos","Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La cedula debe tener 10 digitos", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -125,7 +152,7 @@ namespace Prueba_Git
             {
                 if (!char.IsDigit(item))
                 {
-                    MessageBox.Show("la cedula debe tener solo numeros","Validacion",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("la cedula debe tener solo numeros", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
 
                 }
@@ -135,51 +162,32 @@ namespace Prueba_Git
 
 
 
-        private void dataGridView_Estudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox_ApellidosEstudiantes_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_Estudiantes_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox_Buscar_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                string filtro = textBox_Buscar.Text.Trim().ToLower();
+                string buscar = textBox_Buscar.Text.Trim().ToLower();
                 List<Estudiante> listaFiltrada = new List<Estudiante>();
 
-                foreach (var estudiante in DatosGlobales.Estudiantes)
+                foreach (var estudiantes in DatosSistema.Estudiantes)
                 {
-                    string cedula = estudiante.Cedula.ToLower();
-                    string nombre = estudiante.Nombre.ToLower();
+                    string cedula = estudiantes.Cedula.ToLower();
+                    string nombre = estudiantes.Nombre.ToLower();
 
-                    if (cedula.Contains(filtro) || nombre.Contains(filtro))
+                    if (cedula.Contains(buscar) || nombre.Contains(buscar))
                     {
-                        listaFiltrada.Add(estudiante);
+                        listaFiltrada.Add(estudiantes);
                     }
                 }
 
                 dataGridView_Estudiantes.DataSource = null;
                 dataGridView_Estudiantes.DataSource = listaFiltrada;
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al filtrar los datos del estudiante : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

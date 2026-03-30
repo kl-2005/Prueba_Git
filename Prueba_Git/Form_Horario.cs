@@ -20,6 +20,32 @@ namespace Prueba_Git
             MostrarHorario();
         }
 
+     
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+      
+
+        private void comboBox_Dia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox_Hora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
         private void CargarDiasInscripcion()
         {
             string[] diasTutorias = new System.String[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes" };
@@ -28,15 +54,9 @@ namespace Prueba_Git
 
         private void CargarHorasTutorias()
         {
-            string[] horasTutorias = new System.String[] { "8:00 - 9:00", "9:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00" };
+            string[] horasTutorias = { "8:00 - 9:00", "9:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00", "14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00", "17:00 - 18:00", "18:00 - 19:00", "19:00 - 20:00" };
             comboBox_Hora.Items.AddRange(horasTutorias);
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_RegistrarHorario_Click(object sender, EventArgs e)
         {
             try
@@ -48,7 +68,7 @@ namespace Prueba_Git
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al registrar el horario : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -65,7 +85,7 @@ namespace Prueba_Git
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al validar los campos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al validar los campos del horario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
         }
@@ -77,7 +97,7 @@ namespace Prueba_Git
                 string Dia = comboBox_Dia.SelectedItem.ToString();
                 string hora = comboBox_Hora.SelectedItem.ToString();
 
-                foreach (var item in DatosGlobales.Horarios)
+                foreach (var item in DatosSistema.Horarios)
                 {
                     if (item.Dia == Dia && item.Hora == hora)
                     {
@@ -86,32 +106,22 @@ namespace Prueba_Git
                     }
                 }
 
-                DatosGlobales.Horarios.Add(new Horario(Dia, hora, textBox_Aula.Text));
+                DatosSistema.Horarios.Add(new Horario(Dia, hora, textBox_Aula.Text));
                 MostrarHorario();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar hotario : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al guardar horario : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void MostrarHorario()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = DatosGlobales.Horarios;
+            dataGridView1.DataSource = DatosSistema.Horarios;
         }
 
-        private void comboBox_Dia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

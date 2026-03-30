@@ -25,7 +25,7 @@ namespace Prueba_Git
         private void CargarHorariosComboBox()
         {
             comboBox3.DataSource = null;
-            comboBox3.DataSource = DatosGlobales.Horarios;
+            comboBox3.DataSource = DatosSistema.Horarios;
             comboBox3.DisplayMember = "HorarioCompleto";
         }
 
@@ -39,7 +39,7 @@ namespace Prueba_Git
 
             string horarioSeleccionado = horario.Dia + " " + horario.Hora;
 
-            bool yaInscrito = DatosGlobales.Inscripciones
+            bool yaInscrito = DatosSistema.Inscripciones
                 .Any(i => i.Estudiante == estudiante.NombreCompleto);
 
             if (yaInscrito)
@@ -48,8 +48,7 @@ namespace Prueba_Git
                 return;
             }
 
-            int inscritos = DatosGlobales.Inscripciones
-                .Count(i => i.Tutor == tutor.Nombre);
+            int inscritos = DatosSistema.Inscripciones.Count(i => i.Tutor == tutor.Nombre);
 
             if (inscritos >= tutor.Cupo_Disponible)
             {
@@ -57,7 +56,7 @@ namespace Prueba_Git
                 return;
             }
 
-            DatosGlobales.Inscripciones.Add(new Inscripcion(
+            DatosSistema.Inscripciones.Add(new Inscripcion(
                 estudiante.NombreCompleto,
                 tutor.Nombre,
                 horarioSeleccionado
@@ -69,15 +68,15 @@ namespace Prueba_Git
         private void CargarTablas()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = DatosGlobales.Inscripciones;
+            dataGridView1.DataSource = DatosSistema.Inscripciones;
 
-            var datos = from t in DatosGlobales.Tutores
+            var datos = from t in DatosSistema.Tutores
                         select new
                         {
                             Tutor = t.Nombre,
                             CuposTotales = t.Cupo_Maximo,
                             CuposDisponibles = t.Cupo_Maximo -
-                                DatosGlobales.Inscripciones.Count(i => i.Tutor == t.Nombre)
+                                DatosSistema.Inscripciones.Count(i => i.Tutor == t.Nombre)
                         };
 
             dataGridView_Inscripciones.DataSource = null;
@@ -108,14 +107,14 @@ namespace Prueba_Git
         private void CargarTutoresComboBox()
         {
             comboBox2.DataSource = null;
-            comboBox2.DataSource = DatosGlobales.Tutores;
+            comboBox2.DataSource = DatosSistema.Tutores;
             comboBox2.DisplayMember = "Nombre";
         }
 
         private void CargarEstudiantesComboBox()
         {
             comboBox1.DataSource = null;
-            comboBox1.DataSource = DatosGlobales.Estudiantes;
+            comboBox1.DataSource = DatosSistema.Estudiantes;
             comboBox1.DisplayMember = "NombreCompleto";
         }
 

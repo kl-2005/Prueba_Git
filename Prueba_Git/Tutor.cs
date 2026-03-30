@@ -15,6 +15,7 @@ namespace Prueba_Git
         public String Apellido { get; set; }
         public int Cupo_Maximo {get; set; }
         public int Cupo_Disponible { get; set; }
+
         public Tutor()
         {
 
